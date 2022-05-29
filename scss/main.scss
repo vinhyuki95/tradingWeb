@@ -1,0 +1,312 @@
+$bg-col: #131721;
+$col-white: #ffffff;
+$col-gray: #a0a3af;
+$col-orange: #e7ab21;
+$col-black: #252424;
+$col-green: #38ada9;
+$col-green-dt: #4fd08a;
+$col-purple-dt: #bb33dd;
+$col-yellow-dt: #ccac3d;
+$col-red-dt: #cf422f;
+$col-blue-dt: #00cccc;
+$gray-col-th: #292d38;
+$green-col-th: #0fb159;
+$red-col-th: #dd2e16;
+$font-family: "Roboto";
+$font-size-14px: 14px;
+$font-size-12px: 12px;
+@mixin CSSlogin($font-size: 14px, $line-height: 20px) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+@mixin CSSbtn(
+  $max-width: 395px,
+  $width: 100%,
+  $padding: 16px 0px,
+  $boder-radius: 10px,
+  $cursor: pointer
+) {
+  max-width: $max-width;
+  width: $width;
+  padding: $padding;
+  border-radius: $boder-radius;
+  cursor: $cursor;
+}
+@mixin CSShover($col: #b2bec3) {
+  color: $col;
+  font-size: 16x;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+// body::-webkit-scrollbar {
+//   width: 0 !important;
+// }
+
+body {
+  height: 100vh;
+  background-image: url(../img/BG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: $font-family;
+}
+
+.login {
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  .login__flex {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.login__flexLeft {
+  width: 40%;
+  flex-direction: column;
+  padding-top: 38px;
+  padding-left: 56px;
+  padding-right: 63px;
+}
+
+.logo__login {
+  display: flex;
+  flex-direction: column;
+  &-navi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 95px;
+    a {
+      max-width: 100px;
+      text-decoration: none;
+      img {
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+    p {
+      margin-top: 25px;
+      font-family: Roboto;
+      font-size: 12px;
+      color: rgb(160, 163, 175);
+      line-height: 16px;
+      max-width: 534px;
+      width: 100%;
+    }
+  }
+}
+
+.chart__login {
+  max-width: 635px;
+  width: 100%;
+  img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: fill;
+  }
+}
+.login__flexRight {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  .login__block {
+    max-width: 395px;
+    width: 100%;
+  }
+}
+
+.login__block {
+  .login__heading {
+    padding: 5px 0px;
+    font-size: 32px;
+    line-height: 25px;
+    margin-bottom: 39px;
+    color: $col-white;
+  }
+  .login__heading:hover {
+    color: #dfe4ea;
+  }
+}
+form {
+  .login__account,
+  .login__password {
+    @include CSSlogin();
+    color: $col-gray;
+    margin-bottom: 8px;
+    line-height: 29px;
+  }
+  .login__account:hover .login__password:hover {
+    @include CSShover();
+  }
+}
+
+.login__acc,
+.login__pass {
+  input {
+    @include CSSbtn();
+    background-color: #313645;
+    padding-left: 16px;
+    color: $col-white;
+    font-size: $font-size-14px;
+    outline: none;
+    border: none;
+  }
+  input:focus {
+    background-color: #57606f;
+  }
+}
+form {
+  .login__acc {
+    margin-bottom: 12px;
+  }
+
+  .login__pass {
+    margin-bottom: 22px;
+    display: flex;
+    align-items: center;
+  }
+
+  .login__btn {
+    a {
+      display: block;
+      text-decoration: none;
+      color: $col-black;
+      font-family: $font-family;
+      button {
+        @include CSSbtn();
+        background-color: $col-orange;
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-weight: 700;
+        border: none;
+        outline: none;
+      }
+      button:hover {
+        background-color: #f6b93b;
+        color: $col-black;
+      }
+    }
+  }
+
+  .forgot__pass {
+    margin-bottom: 20px;
+    a {
+      color: $col-gray;
+      margin-bottom: 25px;
+      font-size: $font-size-14px;
+      text-decoration: none;
+    }
+    a:hover {
+      @include CSShover();
+    }
+  }
+
+  span {
+    color: $col-gray;
+    font-size: $font-size-14px;
+    a {
+      color: $col-orange;
+      text-decoration: none;
+      font-size: $font-size-14px;
+    }
+  }
+
+  span:hover {
+    @include CSShover();
+  }
+}
+
+.login__flexRight {
+  .copyright {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    .copyright-detail {
+      display: flex;
+      justify-content: space-between;
+      font-size: $font-size-14px;
+      a {
+        text-decoration: none;
+        color: $col-gray;
+        padding: 0px 20px;
+      }
+      a:hover {
+        @include CSShover();
+      }
+    }
+  }
+}
+
+//Login-responsive
+@media only screen and(max-width: 1580px) {
+  .login__flexLeft {
+    padding-right: 56px;
+  }
+}
+
+@media only screen and(max-width: 1500px) {
+  .login__flexLeft {
+    padding-right: 20px;
+  }
+}
+
+@media only screen and(max-width: 1390px) {
+  .login__flexLeft {
+    padding-right: 0px;
+  }
+}
+
+@media only screen and(max-width: 1186px) {
+  .login__flexRight {
+    width: 60%;
+  }
+}
+
+@media only screen and(max-width: 1024px) {
+  .login__flexLeft {
+    display: none;
+  }
+  .chart__login {
+    display: none;
+  }
+  .login__flexRight {
+    width: 100%;
+    padding: 0px 15px;
+  }
+}
+
+@media only screen and(max-width: 922px) {
+  .login__flexRight {
+    .login__block {
+      max-width: 350px;
+    }
+  }
+}
+@media only screen and(max-width:591px) {
+  .login__flexRight {
+    .copyright {
+      display: none;
+    }
+  }
+}
+@media only screen and(max-width:467px) {
+  .login__flexRight {
+    .login__block {
+      max-width: 300px;
+    }
+  }
+}
