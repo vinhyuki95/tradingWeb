@@ -49,9 +49,9 @@ $font-size-12px: 12px;
 
 body {
   height: 100vh;
-  background-image: url(../img/BG.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url(../img/BG.png);
+  // background-repeat: no-repeat;
+  // background-size: cover;
   font-family: $font-family;
 }
 
@@ -59,6 +59,9 @@ body {
   width: 100%;
   height: 100%;
   max-width: 1920px;
+  background-image: url(../img/BG.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   .login__flex {
     height: 100%;
     display: flex;
@@ -107,8 +110,8 @@ body {
   max-width: 635px;
   width: 100%;
   img {
-    height: 100%;
-    max-width: 100%;
+    // max-width: 86%;
+    width: 80%;
     object-fit: fill;
   }
 }
@@ -276,13 +279,29 @@ form {
   }
 }
 
-@media only screen and(max-width: 1024px) {
+@media only screen and(max-width: 1178px) {
   .login__flexLeft {
-    display: none;
+    padding: 0px;
+    width: 0px;
+    .logo__login {
+      &-navi {
+        a {
+          position: absolute;
+          top: 50px;
+          left: 50px;
+          opacity: 0.4;
+          height: 28px;
+        }
+        p {
+          display: none;
+        }
+      }
+    }
   }
   .chart__login {
     display: none;
   }
+
   .login__flexRight {
     width: 100%;
     padding: 0px 15px;
@@ -295,11 +314,41 @@ form {
       max-width: 350px;
     }
   }
+  .login__flexLeft {
+    .logo__login {
+      &-navi {
+        a {
+          position: absolute;
+          top: 50px;
+          left: 30px;
+          opacity: 0.4;
+          height: 30px;
+        }
+        p {
+          display: none;
+        }
+      }
+    }
+  }
 }
 @media only screen and(max-width:591px) {
+  .login__flexLeft {
+    .logo__login {
+      &-navi {
+        a {
+          display: none;
+        }
+      }
+    }
+  }
   .login__flexRight {
     .copyright {
-      display: none;
+      .copyright-detail {
+        a {
+          padding: 0px 5px;
+          font-size: 12px;
+        }
+      }
     }
   }
 }
@@ -308,5 +357,16 @@ form {
     .login__block {
       max-width: 300px;
     }
+    .copyright {
+      display: none;
+    }
   }
+}
+
+//market
+#root {
+  width: 1920px;
+}
+body {
+  background-image: none;
 }
