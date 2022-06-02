@@ -38,6 +38,17 @@ $font-12px: 12px;
   font-size: 16x;
 }
 
+// table
+@mixin CSSborders($border: 1px solid #20232d) {
+  border: $border;
+}
+@mixin CSSchangeborder($border: 1px solid #282c37) {
+  border: $border;
+}
+@mixin textAlign($text-align: center) {
+  text-align: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -418,7 +429,7 @@ form {
   }
 }
 
-//market
+//market-trading//
 #root {
   width: 100%;
   background-color: $bg-col;
@@ -482,6 +493,7 @@ header {
     border-bottom: 1px solid $col-orange;
   }
 }
+
 // header__right
 .header__right {
   display: flex;
@@ -544,19 +556,15 @@ header {
     height: 5px;
   }
 }
-// end-header__right
 
-// chart
+// chart__wrap
 .swiper {
   background-color: $bg-chart;
 }
 
 .swiper-wrapper {
-  padding: 0px 15px;
-
   .swiper-slide {
-    padding: 20px 0px 0px 0px;
-    height: 140px;
+    padding: 20px 0px 20px 0px;
   }
 }
 
@@ -565,13 +573,10 @@ header {
   justify-content: space-between;
   border-right: 1px solid #292d38;
   color: #ffffff;
-  margin-right: -15px;
-  padding-right: 15px;
+  padding: 0px 15px;
 }
 
 .chart__content {
-  width: 50%;
-  // max-width: 140px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -646,7 +651,7 @@ header {
 .price__board {
   background-color: #292d38;
   display: flex;
-  padding: 5px 0px;
+  padding: 4px 0px;
   justify-content: space-between;
 }
 
@@ -677,49 +682,70 @@ header {
   }
 }
 
-.block__main {
-  .block__item {
+.tab-content > .active {
+  display: block;
+  color: $col-white;
+}
+
+// navtabs
+.price__left {
+  display: flex;
+  align-items: center;
+  .nav-tabs {
     display: flex;
     align-items: center;
     list-style: none;
     color: #ffffff;
     margin: 0px;
     padding: 0px;
-    &-link {
+    width: 900px;
+    width: 100%;
+    .nav-item {
       margin: 0px;
       display: flex;
       align-items: center;
-      font-size: 13px;
-      padding: 0px 8px;
+      font-size: $font-14px;
+      padding: 0px 10px;
       list-style: none;
-      a {
+      .nav-link {
         text-decoration: none;
         color: #797f8a;
         padding: 4px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      }
+      a {
+        margin-right: 0px;
+        border: none;
+        color: $col-orange;
+        outline: none;
         img {
-          padding: 0px 8px;
+          padding: 0px 5px;
+        }
+        .star {
+          margin-bottom: 4px;
         }
       }
+
       a:hover {
         color: $col-orange;
         padding: 4px;
         background-color: #373940;
         border-radius: 2px;
+        border: none;
+        border-radius: 5px;
+        color: $col-orange;
+        outline: none;
+      }
+      a:focus {
+        background-color: #373940;
+        border-radius: 5px;
+        border: none;
+        color: $col-orange;
+        outline: none;
       }
     }
   }
 }
 
-.tab-content > .active {
-  display: block;
-  color: $col-white;
-  // padding: 20px 10px;
-}
-
-// price__left
 header {
   .price__board {
     .price__left {
@@ -727,104 +753,45 @@ header {
         border-bottom: none;
       }
     }
-  }
-}
-
-.nav-tabs {
-  li {
-    background-color: #292d38;
-    a {
-      background-color: none;
-      color: #797f8a;
-      padding: 0px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      img {
-        padding: 0px 6px;
-      }
-      .star {
-        margin-bottom: 4px;
-        height: 13px;
+    .price__right {
+      .nav-tabs {
+        border-bottom: none;
+        .nav-item {
+          a {
+            margin-right: 0px;
+            padding: 10px;
+          }
+          a:hover {
+            background-color: #373940;
+            border: none;
+          }
+        }
       }
     }
-    a:hover {
-      border-radius: 0px;
-      background-color: red;
-    }
-  }
-  .active {
-    a {
-      color: $col-gray !important;
-      background-color: #292d38 !important;
-      border: none !important;
-      // padding: 0px;
-    }
-    a:hover {
-      color: $col-gray !important;
-      background-color: #292d38 !important;
-      border: none !important;
-    }
-    a:focus {
-      color: $col-gray !important;
-      background-color: #292d38 !important;
-    }
-  }
-  .active {
-    background-color: #292d38;
-  }
-}
-// price__right
-.price__right {
-  .nav-tabs {
-    border-bottom: none;
   }
 }
 
 // table
-@mixin CSSborders($border: 1px solid #20232d) {
-  border: $border;
-}
-@mixin CSSchangeborder($border: 1px solid #282c37) {
-  border: $border;
-}
-@mixin textAlign($text-align: center) {
-  text-align: center;
-}
-
 .table_price {
   .theader {
-    position: -webkit-sticky; // this is for all Safari (Desktop & iOS), not for Chrome
+    position: -webkit-sticky;
     position: sticky;
-    top: 250px;
+    top: 0px;
     background-color: $bg-col;
-    z-index: 1; // any positive value, layer order is global
-    // background: #fff;
+    z-index: 111;
   }
 }
 .table_price {
-  overflow: hidden;
   border-collapse: collapse;
   background-color: $bg-col;
-  overflow-y: scroll;
   width: 100%;
   max-width: 1920px;
   @include CSSborders();
   tr {
     @include CSSborders();
-    // position: sticky;
-    // border: 1px solid black;
     th {
       @include CSSborders();
       font-size: $font-12px;
-      // position: -webkit-sticky; // this is for all Safari (Desktop & iOS), not for Chrome
-      // position: sticky;
-      // border: 1px solid black;
-      // top: 260px;
-      // background-color: white;
-      // color: black;
-      // z-index: 1; // any positive value, layer order is global
-      // // background: #fff;
       a {
         text-decoration: none;
         padding: 0px 5px;
@@ -889,5 +856,147 @@ header {
     // .change-width {
     //   padding: 0px 65px !important;
     // }
+  }
+}
+// thumbnail__wrap
+.thumbnail__wrap {
+  background-color: $bg-col;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap: 10px;
+  color: white;
+  padding: 0px 10px;
+  padding-top: 16px;
+  background-color: $bg-col;
+}
+
+.thumbnail__board {
+  background-color: $gray-col-th;
+  border-radius: 5px;
+  padding: 15px;
+  .thumbnail__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    &-info {
+      display: flex;
+      align-items: center;
+      color: $col-green-dt;
+      div:first-child {
+        padding-right: 10px;
+      }
+      div:nth-child(2) {
+        font-size: $font-12px;
+      }
+      div:last-child {
+        padding-left: 8px;
+        font-size: $font-12px;
+      }
+    }
+    .txt-red {
+      color: $col-red-dt !important;
+    }
+    img {
+      height: 15px;
+    }
+  }
+  .thumbnail__bottom {
+    &-grid {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      .dt-box {
+        font-size: $font-12px;
+        div:first-child {
+          color: $col-gray;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
+.dt-box {
+  div {
+    .txt-green {
+      color: $col-green-dt;
+    }
+    .txt-red {
+      color: $red-col-th;
+    }
+  }
+}
+
+// responsive-header
+@media only screen and(max-width: 1946px) {
+  .overflow {
+    overflow-x: scroll;
+  }
+  .overflow::-webkit-scrollbar {
+    width: 0 !important;
+  }
+}
+@media only screen and(max-width:1205px) {
+  .header__nav {
+    padding-left: 10px;
+  }
+  .navbar__item {
+    .navbar__item-link {
+      padding: 0px 10px;
+    }
+  }
+  .header__flex {
+    .img-transaction {
+      padding: 0px 15px 0px 5px;
+    }
+    span {
+      padding-right: 17px;
+    }
+  }
+  .header__account {
+    .ring-box {
+      padding: 0px 12px;
+    }
+    p {
+      padding: 0px 10px;
+    }
+  }
+  // .overflow {
+  //   overflow-x: scroll;
+  // }
+}
+@media only screen and (max-width: 1030px) {
+  .header__nav {
+    .navbar {
+      display: none;
+    }
+  }
+}
+
+// respo-swipper
+@media only screen and(max-width:1476px) {
+  .mySwiper {
+    .swiper-wrapper .swiper-slide {
+      min-width: 340px;
+    }
+  }
+}
+// respo-price__board
+@media only screen and(max-width:1322px) {
+  .price__left {
+    .nav-tabs {
+      .nav-item {
+        padding: 0px 5px;
+      }
+    }
+  }
+}
+
+@media only screen and(max-width:1496px) {
+  .thumbnail__wrap {
+    overflow-x: scroll;
+    .thumbnail__board {
+      min-width: 240px;
+      padding: 5px 10px;
+    }
   }
 }
