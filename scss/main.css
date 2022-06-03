@@ -228,20 +228,42 @@ form span:hover {
     display: none; } }
 @media only screen and (max-width: 591px) {
   .login__flexLeft .logo__login-navi a {
-    display: none; }
+    height: 18px; }
 
   .login__flexRight .copyright .copyright-detail a {
     padding: 0px 5px;
     font-size: 12px; } }
 @media only screen and (max-width: 467px) {
+  .login__flexLeft .logo__login-navi a {
+    top: 50px;
+    left: 20px; }
+
   .login__block .login__heading {
-    font-size: 30px; }
+    font-size: 31px;
+    margin-bottom: 34px; }
 
   .login__flexRight .login__block {
     max-width: 300px; }
-  .login__flexRight .copyright .copyright-detail a {
-    padding: 0px 5px;
-    font-size: 10px; } }
+  .login__flexRight .copyright {
+    bottom: 15px; }
+    .login__flexRight .copyright .copyright-detail {
+      display: flex;
+      flex-wrap: wrap; }
+
+  form .login__btn a button {
+    padding: 15px 0px 15px 8px; }
+  form .login__acc input {
+    padding: 15px 0px 15px 8px; }
+  form .login__pass input {
+    padding: 15px 0px 15px 8px; }
+
+  .login__flexRight .copyright .copyright-detail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px 20px; }
+    .login__flexRight .copyright .copyright-detail a {
+      padding: 4px 10px; } }
 @media only screen and (max-width: 375px) {
   .login__block {
     max-width: 273px; }
@@ -254,11 +276,7 @@ form span:hover {
     .login__block .login__acc input {
       padding: 14px 0px 14px 14px; }
     .login__block .login__pass input {
-      padding: 14px 0px 14px 14px; }
-
-  .copyright .copyright-detail a {
-    padding: 0px 5px;
-    font-size: 8px; } }
+      padding: 14px 0px 14px 14px; } }
 #root {
   width: 100%;
   background-color: #131721;
@@ -523,7 +541,7 @@ header .price__board .price__right .nav-tabs {
   position: sticky;
   top: 0px;
   background-color: #131721;
-  z-index: 111; }
+  z-index: 1; }
 
 .table_price {
   border-collapse: collapse;

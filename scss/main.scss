@@ -354,7 +354,7 @@ form {
     .logo__login {
       &-navi {
         a {
-          display: none;
+          height: 18px;
         }
       }
     }
@@ -371,9 +371,20 @@ form {
   }
 }
 @media only screen and(max-width:467px) {
+  .login__flexLeft {
+    .logo__login {
+      &-navi {
+        a {
+          top: 50px;
+          left: 20px;
+        }
+      }
+    }
+  }
   .login__block {
     .login__heading {
-      font-size: 30px;
+      font-size: 31px;
+      margin-bottom: 34px;
     }
   }
   .login__flexRight {
@@ -381,16 +392,50 @@ form {
       max-width: 300px;
     }
     .copyright {
+      bottom: 15px;
       .copyright-detail {
+        display: flex;
+        flex-wrap: wrap;
         a {
-          padding: 0px 5px;
-          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  form {
+    .login__btn {
+      a {
+        button {
+          padding: 15px 0px 15px 8px;
+        }
+      }
+    }
+    .login__acc {
+      input {
+        padding: 15px 0px 15px 8px;
+      }
+    }
+    .login__pass {
+      input {
+        padding: 15px 0px 15px 8px;
+      }
+    }
+  }
+
+  .login__flexRight {
+    .copyright {
+      .copyright-detail {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0px 20px;
+        a {
+          padding: 4px 10px;
         }
       }
     }
   }
 }
-
 @media only screen and(max-width:375px) {
   .login__block {
     max-width: 273px;
@@ -416,14 +461,6 @@ form {
     .login__pass {
       input {
         padding: 14px 0px 14px 14px;
-      }
-    }
-  }
-  .copyright {
-    .copyright-detail {
-      a {
-        padding: 0px 5px;
-        font-size: 8px;
       }
     }
   }
@@ -586,6 +623,7 @@ header {
     margin-bottom: 11px;
   }
 }
+
 .chart__img {
   width: 160px;
   img {
@@ -593,6 +631,7 @@ header {
     width: 100%;
   }
 }
+
 .chart__header {
   &-text {
     display: flex;
@@ -778,7 +817,7 @@ header {
     position: sticky;
     top: 0px;
     background-color: $bg-col;
-    z-index: 111;
+    z-index: 1;
   }
 }
 .table_price {
@@ -960,9 +999,6 @@ header {
       padding: 0px 10px;
     }
   }
-  // .overflow {
-  //   overflow-x: scroll;
-  // }
 }
 @media only screen and (max-width: 1030px) {
   .header__nav {
