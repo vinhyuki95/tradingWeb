@@ -66,7 +66,7 @@ body {
 
 .login {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   max-width: 1920px;
   background-image: url(../img/BG.png);
   background-repeat: no-repeat;
@@ -74,6 +74,7 @@ body {
   .login__flex {
     height: 100%;
     display: flex;
+    min-height: 100vh;
     justify-content: space-between;
   }
 }
@@ -322,6 +323,7 @@ form {
 
   .login__flexRight {
     width: 100%;
+    min-height: 100vh;
     padding: 0px 15px;
   }
 }
@@ -396,8 +398,6 @@ form {
       .copyright-detail {
         display: flex;
         flex-wrap: wrap;
-        a {
-        }
       }
     }
   }
@@ -465,6 +465,7 @@ form {
     }
   }
 }
+// end_responsive Login
 
 //market-trading//
 #root {
@@ -495,6 +496,9 @@ header {
   align-items: center;
   .header__logo {
     display: flex;
+    .fa-solid.fa-xmark {
+      display: none;
+    }
     a {
       text-decoration: none;
     }
@@ -504,7 +508,13 @@ header {
       }
     }
   }
+  // .header__nav {
+  //   .navHide {
+  //     display: none;
+  //   }
+  // }
 }
+
 .header__nav {
   padding-left: 30px;
   .navbar {
@@ -686,12 +696,39 @@ header {
   line-height: 18px;
 }
 
-// price__board
 .price__board {
+  overflow-x: auto;
   background-color: #292d38;
   display: flex;
   padding: 4px 0px;
   justify-content: space-between;
+}
+.price__right {
+  .nav {
+    .nav-item {
+      a {
+        background-color: #292d38;
+        border: none;
+      }
+      a:hover {
+        background-color: none;
+      }
+    }
+  }
+}
+
+.price__left {
+  .nav-pills {
+    .active {
+      a {
+        background-color: #292d38;
+        border: none;
+      }
+      a:hover {
+        background-color: none;
+      }
+    }
+  }
 }
 
 .price__left {
@@ -730,7 +767,7 @@ header {
 .price__left {
   display: flex;
   align-items: center;
-  .nav-tabs {
+  .nav-pills {
     display: flex;
     align-items: center;
     list-style: none;
@@ -750,6 +787,7 @@ header {
         text-decoration: none;
         color: #797f8a;
         padding: 4px;
+        white-space: nowrap;
       }
       a {
         margin-right: 0px;
@@ -785,32 +823,39 @@ header {
   }
 }
 
-header {
-  .price__board {
-    .price__left {
-      .nav-tabs {
-        border-bottom: none;
+.price__left {
+  .nav-pills {
+    border-bottom: none;
+  }
+}
+.price__right {
+  .nav-pills {
+    border-bottom: none;
+    display: flex;
+    .nav-item {
+      a {
+        margin-right: 0px;
+        padding: 10px;
       }
-    }
-    .price__right {
-      .nav-tabs {
-        border-bottom: none;
-        .nav-item {
-          a {
-            margin-right: 0px;
-            padding: 10px;
-          }
-          a:hover {
-            background-color: #373940;
-            border: none;
-          }
-        }
+      a:hover {
+        background-color: #292d38;
+        border: none;
       }
     }
   }
 }
 
 // table
+.table-container::-webkit-scrollbar {
+  width: 0 !important;
+  display: none;
+}
+
+.table-container {
+  max-height: calc(100vh - 295px);
+  height: 100vh;
+  overflow-y: auto;
+}
 .table_price {
   .theader {
     position: -webkit-sticky;
@@ -965,13 +1010,15 @@ header {
   }
 }
 
-// responsive-header
+//responsive-header
+
+.overflow::-webkit-scrollbar {
+  width: 0 !important;
+  display: none;
+}
 @media only screen and(max-width: 1946px) {
   .overflow {
     overflow-x: scroll;
-  }
-  .overflow::-webkit-scrollbar {
-    width: 0 !important;
   }
 }
 @media only screen and(max-width:1205px) {
@@ -1001,9 +1048,56 @@ header {
   }
 }
 @media only screen and (max-width: 1030px) {
-  .header__nav {
-    .navbar {
-      display: none;
+  // css class active
+  .header__logo {
+    .logo {
+      position: relative;
+    }
+    .menu__box {
+      position: absolute;
+      top: 0px;
+      width: 300px;
+      left: -300px;
+      height: 100vh;
+      background-color: #212940;
+      z-index: 10;
+      transition: left 500ms;
+      .fa-solid.fa-xmark {
+        display: block;
+        font-size: 30px;
+        color: $col-orange;
+        margin: 20px;
+        width: 10px;
+      }
+    }
+
+    .active {
+      left: 0;
+    }
+  }
+  .navbar__item {
+    display: none;
+  }
+  .navHide {
+    display: flex !important;
+    flex-direction: column;
+    li {
+      list-style: none;
+      padding: 14px 5px;
+      border-bottom: 1px solid $col-green;
+      display: flex;
+      justify-content: center;
+      a {
+        text-decoration: none;
+        color: $col-white;
+        text-align: center;
+      }
+      a:hover {
+        color: $col-orange;
+      }
+    }
+    li:hover {
+      background-color: #354a6e;
     }
   }
 }
@@ -1019,7 +1113,7 @@ header {
 // respo-price__board
 @media only screen and(max-width:1322px) {
   .price__left {
-    .nav-tabs {
+    .nav-pills {
       .nav-item {
         padding: 0px 5px;
       }
@@ -1033,6 +1127,16 @@ header {
     .thumbnail__board {
       min-width: 240px;
       padding: 5px 10px;
+    }
+  }
+}
+
+@media only screen and(max-width:1141px) {
+  .price__right {
+    .nav-pills {
+      .nav-item {
+        padding: 0px 5px;
+      }
     }
   }
 }

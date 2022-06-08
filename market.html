@@ -29,9 +29,10 @@
           <div class="header__left">
             <div class="header__content">
               <div class="header__logo">
-                <a href="javascript:;">
-                  <img src="./img/icon-menu.svg" alt="menu-icon" />
+                <a class="menu__box" href="javascript:;">
+                  <i class="fa-solid fa-xmark"></i>
                 </a>
+                <img class="logo" src="./img/icon-menu.svg" alt="menu-icon" />
                 <a href="javascript:;">
                   <img
                     class="lg-name"
@@ -41,6 +42,28 @@
                 </a>
               </div>
               <div class="header__nav">
+                <!--nav-hide -->
+                <ul class="navHide" style="display: none">
+                  <li class="list">
+                    <a class="list-item" href="javscript:;"> Thị Trường </a>
+                  </li>
+                  <li class="list">
+                    <a class="list-item" href="javscript:;"> Cơ sở </a>
+                  </li>
+                  <li class="list">
+                    <a class="list-item" href="javscript:;"> Phát sinh </a>
+                  </li>
+                  <li class="list">
+                    <a class="list-item" href="javscript:;"> Tài sản </a>
+                  </li>
+                  <li class="list">
+                    <a class="list-item" href="javscript:;"> Sổ lệnh </a>
+                  </li>
+                  <li class="list">
+                    <a class="list-item" href="javscript:;"> Tiện ích </a>
+                  </li>
+                </ul>
+                <!--navbar -->
                 <ul class="navbar">
                   <li class="navbar__item">
                     <a class="navbar__item-link" href="javscript:;">
@@ -314,232 +337,238 @@
           </div>
         </div>
         <!--price__board  -->
-        <div class="price__board">
-          <div class="price__left">
-            <div class="block__search">
-              <div>
-                <img src="./img/icon-search.png" alt="icon-search" />
-                <input type="text" placeholder="Tìm kiếm (Ctrl Space)" />
+        <div class="price-container">
+          <div class="price__board">
+            <div class="price__left">
+              <div class="block__search">
+                <div>
+                  <img src="./img/icon-search.png" alt="icon-search" />
+                  <input type="text" placeholder="Tìm kiếm (Ctrl Space)" />
+                </div>
               </div>
+              <!-- navtab -->
+              <ul class="nav nav-pills" href="myTab" role="tablist">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    href="#uu-thich"
+                    data-toggle="tab"
+                    id="tab-uu-thich"
+                    role="tab"
+                    aria-controls="uu-thich"
+                    aria-selected="true"
+                  >
+                    <img
+                      class="star"
+                      src="./img/Star-gray-color.png"
+                      alt="star"
+                    />
+                    Ưu thích
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#top"
+                    data-toggle="tab"
+                    id="tab-top"
+                    role="tab"
+                    aria-controls="top"
+                    aria-selected="false"
+                  >
+                    Top
+                    <img src="./img/dropdown-stick.png" alt="dropdown" />
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#hose"
+                    data-toggle="tab"
+                    id="tab-hose"
+                    role="tab"
+                    aria-controls="hose"
+                    aria-selected="false"
+                    >HOSE</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#hsx"
+                    data-toggle="tab"
+                    id="tab-hsx"
+                    role="tab"
+                    aria-controls="hsx"
+                    aria-selected="false"
+                    >HSX</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#vn30"
+                    data-toggle="tab"
+                    id="tab-vn30"
+                    role="tab"
+                    aria-controls="vn30"
+                    aria-selected="false"
+                    >VN30</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#hnx30"
+                    data-toggle="tab"
+                    id="tab-hnx30"
+                    role="tab"
+                    aria-controls="hnx30"
+                    aria-selected="false"
+                    >HNX30</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#upcom"
+                    data-toggle="tab"
+                    id="tab-upcom"
+                    role="tab"
+                    aria-controls="upcom"
+                    aria-selected="false"
+                    >UPCOM</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#thoa-thuan"
+                    data-toggle="tab"
+                    id="tab-thoa-thuan"
+                    role="tab"
+                    aria-controls="thoa-thuan"
+                    aria-selected="false"
+                    >Thỏa thuận</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#theo-nganh"
+                    data-toggle="tab"
+                    id="tab-theo-nganh"
+                    role="tab"
+                    aria-controls="theo-nganh"
+                    aria-selected="false"
+                  >
+                    Theo ngành
+                    <img src="./img/dropdown-stick.png" alt="dropdown" />
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#chung-quyen"
+                    data-toggle="tab"
+                    id="tab-chung-quyen"
+                    role="tab"
+                    aria-controls="chung-quyen"
+                    aria-selected="false"
+                    >Chứng quyền</a
+                  >
+                </li>
+              </ul>
             </div>
-            <!-- navtab -->
-            <ul class="nav nav-tabs" href="myTab" role="tablist">
-              <li class="nav-item change-nav">
-                <a
-                  class="nav-link active"
-                  href="#uu-thich"
-                  data-toggle="tab"
-                  id="tab-uu-thich"
-                  role="tab"
-                  aria-controls="uu-thich"
-                  aria-selected="true"
-                >
-                  <img
-                    class="star"
-                    src="./img/Star-gray-color.png"
-                    alt="star"
-                  />
-                  Ưu thích
-                </a>
-              </li>
-              <li class="nav-item change-nav">
-                <a
-                  class="nav-link"
-                  href="#top"
-                  data-toggle="tab"
-                  id="tab-top"
-                  role="tab"
-                  aria-controls="top"
-                  aria-selected="false"
-                >
-                  Top
-                  <img src="./img/dropdown-stick.png" alt="dropdown" />
-                </a>
-              </li>
-              <li class="nav-item change-nav">
-                <a
-                  class="nav-link"
-                  href="#hose"
-                  data-toggle="tab"
-                  id="tab-hose"
-                  role="tab"
-                  aria-controls="hose"
-                  aria-selected="false"
-                  >HOSE</a
-                >
-              </li>
-              <li class="nav-item change-nav">
-                <a
-                  class="nav-link"
-                  href="#hsx"
-                  data-toggle="tab"
-                  id="tab-hsx"
-                  role="tab"
-                  aria-controls="hsx"
-                  aria-selected="false"
-                  >HSX</a
-                >
-              </li>
-              <li class="nav-item change-nav">
-                <a
-                  class="nav-link"
-                  href="#vn30"
-                  data-toggle="tab"
-                  id="tab-vn30"
-                  role="tab"
-                  aria-controls="vn30"
-                  aria-selected="false"
-                  >VN30</a
-                >
-              </li>
-              <li class="nav-item change-nav">
-                <a
-                  class="nav-link"
-                  href="#hnx30"
-                  data-toggle="tab"
-                  id="tab-hnx30"
-                  role="tab"
-                  aria-controls="hnx30"
-                  aria-selected="false"
-                  >HNX30</a
-                >
-              </li>
-              <li class="nav-item change-nav">
-                <a
-                  class="nav-link"
-                  href="#upcom"
-                  data-toggle="tab"
-                  id="tab-upcom"
-                  role="tab"
-                  aria-controls="upcom"
-                  aria-selected="false"
-                  >UPCOM</a
-                >
-              </li>
-              <li class="nav-item change-nav">
-                <a
-                  class="nav-link"
-                  href="#thoa-thuan"
-                  data-toggle="tab"
-                  id="tab-thoa-thuan"
-                  role="tab"
-                  aria-controls="thoa-thuan"
-                  aria-selected="false"
-                  >Thỏa thuận</a
-                >
-              </li>
-              <li class="nav-item change-nav">
-                <a
-                  class="nav-link"
-                  href="#theo-nganh"
-                  data-toggle="tab"
-                  id="tab-theo-nganh"
-                  role="tab"
-                  aria-controls="theo-nganh"
-                  aria-selected="false"
-                >
-                  Theo ngành
-                  <img src="./img/dropdown-stick.png" alt="dropdown" />
-                </a>
-              </li>
-              <li class="nav-item change-nav">
-                <a
-                  class="nav-link"
-                  href="#chung-quyen"
-                  data-toggle="tab"
-                  id="tab-chung-quyen"
-                  role="tab"
-                  aria-controls="chung-quyen"
-                  aria-selected="false"
-                  >Chứng quyền</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="price__right">
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item change-nav">
-                <a
-                  class="nav-link active"
-                  id="table"
-                  data-toggle="tab"
-                  href="#tab-table"
-                  role="tab"
-                  aria-controls="table"
-                  aria-selected="true"
-                >
-                  <img
-                    class="detail-box"
-                    src="./img/icon-detail-box.png"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li class="nav-item change-nav">
-                <a
-                  class="nav-link"
-                  id="thumbnail-tab"
-                  data-toggle="tab"
-                  href="#thumbnail"
-                  role="tab"
-                  aria-controls="profile"
-                  aria-selected="false"
-                >
-                  <img
-                    class="thumbnail-icon"
-                    src="./img/thumbnail-icon-box.png"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li class="nav-item change-nav">
-                <a
-                  class="nav-link"
-                  id="tab"
-                  data-toggle="tab"
-                  href="#"
-                  role="tab"
-                  aria-controls="#"
-                  aria-selected="false"
-                >
-                  <img
-                    class="detail-active"
-                    src="./img/icon-detail-box.active.png"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li class="nav-item change-nav">
-                <a
-                  class="nav-link"
-                  id="tab"
-                  data-toggle="tab"
-                  href="#profile"
-                  role="tab"
-                  aria-controls="#"
-                  aria-selected="false"
-                >
-                  <img
-                    class="icon-install"
-                    src="./img/icon-setting.png"
-                    alt=""
-                  />
-                </a>
-              </li>
-              <li class="nav-item change-nav">
-                <a
-                  class="nav-link"
-                  id="tab"
-                  data-toggle="tab"
-                  href="#"
-                  role="tab"
-                  aria-controls="#"
-                  aria-selected="false"
-                >
-                  <img class="deepzoom" src="./img/deepzoom-icon.png" alt="" />
-                </a>
-              </li>
-            </ul>
+            <div class="price__right">
+              <ul class="nav nav-pills" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    id="table"
+                    data-toggle="tab"
+                    href="#tab-table"
+                    role="tab"
+                    aria-controls="table"
+                    aria-selected="true"
+                  >
+                    <img
+                      class="detail-box"
+                      src="./img/icon-detail-box.png"
+                      alt=""
+                    />
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    id="thumbnail-tab"
+                    data-toggle="tab"
+                    href="#thumbnail"
+                    role="tab"
+                    aria-controls="profile"
+                    aria-selected="false"
+                  >
+                    <img
+                      class="thumbnail-icon"
+                      src="./img/thumbnail-icon-box.png"
+                      alt=""
+                    />
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    id="tab"
+                    data-toggle="tab"
+                    href="#"
+                    role="tab"
+                    aria-controls="#"
+                    aria-selected="false"
+                  >
+                    <img
+                      class="detail-active"
+                      src="./img/icon-detail-box.active.png"
+                      alt=""
+                    />
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    id="tab"
+                    data-toggle="tab"
+                    href="#profile"
+                    role="tab"
+                    aria-controls="#"
+                    aria-selected="false"
+                  >
+                    <img
+                      class="icon-install"
+                      src="./img/icon-setting.png"
+                      alt=""
+                    />
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    id="tab"
+                    data-toggle="tab"
+                    href="#"
+                    role="tab"
+                    aria-controls="#"
+                    aria-selected="false"
+                  >
+                    <img
+                      class="deepzoom"
+                      src="./img/deepzoom-icon.png"
+                      alt=""
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </header>
@@ -632,818 +661,822 @@
           role="tabpanel"
           aria-labelledby="table"
         >
-          <table class="table_price">
-            <thead class="theader">
-              <tr class="tr">
-                <th rowspan="2" class="blackbg">Mã</th>
-                <th rowspan="2" class="border-left change-color">Trần</th>
-                <th rowspan="2" class="border-left change-color">Sàn</th>
-                <th rowspan="2" class="border-left change-color">TC</th>
-                <th colspan="6" class="border-right">Dư mua</th>
-                <th colspan="3" class="border-right change-color">Khớp lệnh</th>
-                <th colspan="6" class="border-right">Dư mua</th>
-                <th rowspan="2" class="border-left change-padding">
-                  <a href="javascript:;">
-                    <img src="./img/prev-icon.png" alt="" />
-                  </a>
-                  <span>Tổng KL</span>
-                  <a href="javascript:;">
-                    <img src="./img/next-icon.png" alt="" />
-                  </a>
-                </th>
-                <th colspan="3" class="border-right change-color">Giá</th>
-                <th colspan="2" class="border-right change-width">NĐTNN</th>
-              </tr>
-              <tr class="tr">
-                <th class="price-item">Giá 3</th>
-                <th class="price-item">KL 3</th>
-                <th class="price-item">Giá 2</th>
-                <th class="price-item">KL 2</th>
-                <th class="price-item">Giá 1</th>
-                <th class="price-item">KL 1</th>
-                <th class="price-item change-color">Giá</th>
-                <th class="price-item change-color">
-                  <a href="javascript:;">
-                    <img src="./img/prev-icon.png" alt="prev-icon" />
-                  </a>
-                  <span>+/-</span>
-                  <a href="javascript:;">
-                    <img src="./img/next-icon.png" alt="next-icon" />
-                  </a>
-                </th>
-                <th class="price-item change-color">KL</th>
-                <th class="price-item">Giá 3</th>
-                <th class="price-item">KL 3</th>
-                <th class="price-item">Giá 2</th>
-                <th class="price-item">KL 2</th>
-                <th class="price-item">Giá 1</th>
-                <th class="price-item">KL 1</th>
-                <th class="price-item change-color">Cao</th>
-                <th class="price-item change-color">Thấp</th>
-                <th class="price-item change-color">TB</th>
-                <th class="price-item">Mua</th>
-                <th class="price-item">Bán</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="box-data">
-                <td class="green-col">AAA</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,5</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">29,50</td>
-                <td class="green-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="yellow-col change-color">0.4</td>
-                <td class="yellow-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">25,90</td>
-                <td class="purple-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="red-col">AAM</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="red-col">19.3</td>
-                <td class="red-col">44,5</td>
-                <td class="red-col">19.35</td>
-                <td class="red-col">29,50</td>
-                <td class="red-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="red-col change-color">0.4</td>
-                <td class="red-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="yellow-col">19.35</td>
-                <td class="yellow-col">25,90</td>
-                <td class="yellow-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAA</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,5</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">29,50</td>
-                <td class="green-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="yellow-col change-color">0.4</td>
-                <td class="yellow-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">25,90</td>
-                <td class="purple-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="red-col">AAM</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="red-col">19.3</td>
-                <td class="red-col">44,5</td>
-                <td class="red-col">19.35</td>
-                <td class="red-col">29,50</td>
-                <td class="red-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="red-col change-color">0.4</td>
-                <td class="red-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="yellow-col">19.35</td>
-                <td class="yellow-col">25,90</td>
-                <td class="yellow-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAA</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,5</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">29,50</td>
-                <td class="green-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="yellow-col change-color">0.4</td>
-                <td class="yellow-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">25,90</td>
-                <td class="purple-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="red-col">AAM</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="red-col">19.3</td>
-                <td class="red-col">44,5</td>
-                <td class="red-col">19.35</td>
-                <td class="red-col">29,50</td>
-                <td class="red-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="red-col change-color">0.4</td>
-                <td class="red-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="yellow-col">19.35</td>
-                <td class="yellow-col">25,90</td>
-                <td class="yellow-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAA</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,5</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">29,50</td>
-                <td class="green-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="yellow-col change-color">0.4</td>
-                <td class="yellow-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">25,90</td>
-                <td class="purple-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAM</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="red-col">19.3</td>
-                <td class="red-col">44,5</td>
-                <td class="red-col">19.35</td>
-                <td class="red-col">29,50</td>
-                <td class="red-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="red-col change-color">0.4</td>
-                <td class="red-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="yellow-col">19.35</td>
-                <td class="yellow-col">25,90</td>
-                <td class="yellow-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAA</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,5</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">29,50</td>
-                <td class="green-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="yellow-col change-color">0.4</td>
-                <td class="yellow-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">25,90</td>
-                <td class="purple-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAM</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="red-col">19.3</td>
-                <td class="red-col">44,5</td>
-                <td class="red-col">19.35</td>
-                <td class="red-col">29,50</td>
-                <td class="red-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="red-col change-color">0.4</td>
-                <td class="red-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="yellow-col">19.35</td>
-                <td class="yellow-col">25,90</td>
-                <td class="yellow-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAA</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,5</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">29,50</td>
-                <td class="green-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="yellow-col change-color">0.4</td>
-                <td class="yellow-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">25,90</td>
-                <td class="purple-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAM</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="red-col">19.3</td>
-                <td class="red-col">44,5</td>
-                <td class="red-col">19.35</td>
-                <td class="red-col">29,50</td>
-                <td class="red-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="red-col change-color">0.4</td>
-                <td class="red-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="yellow-col">19.35</td>
-                <td class="yellow-col">25,90</td>
-                <td class="yellow-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAA</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,5</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">29,50</td>
-                <td class="green-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="yellow-col change-color">0.4</td>
-                <td class="yellow-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">25,90</td>
-                <td class="purple-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="red-col">AAM</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="red-col">19.3</td>
-                <td class="red-col">44,5</td>
-                <td class="red-col">19.35</td>
-                <td class="red-col">29,50</td>
-                <td class="red-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="red-col change-color">0.4</td>
-                <td class="red-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="yellow-col">19.35</td>
-                <td class="yellow-col">25,90</td>
-                <td class="yellow-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAA</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,5</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">29,50</td>
-                <td class="green-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="yellow-col change-color">0.4</td>
-                <td class="yellow-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">25,90</td>
-                <td class="purple-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAM</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="red-col">19.3</td>
-                <td class="red-col">44,5</td>
-                <td class="red-col">19.35</td>
-                <td class="red-col">29,50</td>
-                <td class="red-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="red-col change-color">0.4</td>
-                <td class="red-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="yellow-col">19.35</td>
-                <td class="yellow-col">25,90</td>
-                <td class="yellow-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAA</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,5</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">29,50</td>
-                <td class="green-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="yellow-col change-color">0.4</td>
-                <td class="yellow-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">25,90</td>
-                <td class="purple-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAM</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="red-col">19.3</td>
-                <td class="red-col">44,5</td>
-                <td class="red-col">19.35</td>
-                <td class="red-col">29,50</td>
-                <td class="red-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="red-col change-color">0.4</td>
-                <td class="red-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="yellow-col">19.35</td>
-                <td class="yellow-col">25,90</td>
-                <td class="yellow-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="red-col">AAA</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,5</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">29,50</td>
-                <td class="green-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="yellow-col change-color">0.4</td>
-                <td class="yellow-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">25,90</td>
-                <td class="purple-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAM</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="red-col">19.3</td>
-                <td class="red-col">44,5</td>
-                <td class="red-col">19.35</td>
-                <td class="red-col">29,50</td>
-                <td class="red-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="red-col change-color">0.4</td>
-                <td class="red-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="yellow-col">19.35</td>
-                <td class="yellow-col">25,90</td>
-                <td class="yellow-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAA</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,5</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">29,50</td>
-                <td class="green-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="yellow-col change-color">0.4</td>
-                <td class="yellow-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">25,90</td>
-                <td class="purple-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="red-col">AAM</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="red-col">19.3</td>
-                <td class="red-col">44,5</td>
-                <td class="red-col">19.35</td>
-                <td class="red-col">29,50</td>
-                <td class="red-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="red-col change-color">0.4</td>
-                <td class="red-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="yellow-col">19.35</td>
-                <td class="yellow-col">25,90</td>
-                <td class="yellow-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAA</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,5</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">29,50</td>
-                <td class="green-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="yellow-col change-color">0.4</td>
-                <td class="yellow-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">25,90</td>
-                <td class="purple-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAM</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="red-col">19.3</td>
-                <td class="red-col">44,5</td>
-                <td class="red-col">19.35</td>
-                <td class="red-col">29,50</td>
-                <td class="red-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="red-col change-color">0.4</td>
-                <td class="red-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="yellow-col">19.35</td>
-                <td class="yellow-col">25,90</td>
-                <td class="yellow-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="red-col">AAA</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,5</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">29,50</td>
-                <td class="green-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="yellow-col change-color">0.4</td>
-                <td class="yellow-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">25,90</td>
-                <td class="purple-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAM</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="red-col">19.3</td>
-                <td class="red-col">44,5</td>
-                <td class="red-col">19.35</td>
-                <td class="red-col">29,50</td>
-                <td class="red-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="red-col change-color">0.4</td>
-                <td class="red-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="yellow-col">19.35</td>
-                <td class="yellow-col">25,90</td>
-                <td class="yellow-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAA</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,5</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">29,50</td>
-                <td class="green-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="yellow-col change-color">0.4</td>
-                <td class="yellow-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="green-col">19.35</td>
-                <td class="green-col">25,90</td>
-                <td class="purple-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-              <tr class="box-data">
-                <td class="green-col">AAM</td>
-                <td class="purple-col change-color">20.3</td>
-                <td class="blue-col change-color">17.7</td>
-                <td class="yellow-col change-color">19</td>
-                <td class="red-col">19.3</td>
-                <td class="red-col">44,5</td>
-                <td class="red-col">19.35</td>
-                <td class="red-col">29,50</td>
-                <td class="red-col">19.4</td>
-                <td class="green-col">24,80</td>
-                <td class="yellow-col change-color">19.4</td>
-                <td class="red-col change-color">0.4</td>
-                <td class="red-col change-color">181,60</td>
-                <td class="green-col">19.3</td>
-                <td class="green-col">44,50</td>
-                <td class="yellow-col">19.35</td>
-                <td class="yellow-col">25,90</td>
-                <td class="yellow-col">19.4</td>
-                <td class="purple-col">24,80</td>
-                <td class="white-col">24,196,90</td>
-                <td class="green-col change-color">25,90</td>
-                <td class="green-col change-color">19,4</td>
-                <td class="green-col change-color">24,80</td>
-                <td class="white-col">19.4</td>
-                <td class="white-col">24,80</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="table-container">
+            <table class="table_price">
+              <thead class="theader">
+                <tr class="tr">
+                  <th rowspan="2" class="blackbg">Mã</th>
+                  <th rowspan="2" class="border-left change-color">Trần</th>
+                  <th rowspan="2" class="border-left change-color">Sàn</th>
+                  <th rowspan="2" class="border-left change-color">TC</th>
+                  <th colspan="6" class="border-right">Dư mua</th>
+                  <th colspan="3" class="border-right change-color">
+                    Khớp lệnh
+                  </th>
+                  <th colspan="6" class="border-right">Dư mua</th>
+                  <th rowspan="2" class="border-left change-padding">
+                    <a href="javascript:;">
+                      <img src="./img/prev-icon.png" alt="" />
+                    </a>
+                    <span>Tổng KL</span>
+                    <a href="javascript:;">
+                      <img src="./img/next-icon.png" alt="" />
+                    </a>
+                  </th>
+                  <th colspan="3" class="border-right change-color">Giá</th>
+                  <th colspan="2" class="border-right change-width">NĐTNN</th>
+                </tr>
+                <tr class="tr">
+                  <th class="price-item">Giá 3</th>
+                  <th class="price-item">KL 3</th>
+                  <th class="price-item">Giá 2</th>
+                  <th class="price-item">KL 2</th>
+                  <th class="price-item">Giá 1</th>
+                  <th class="price-item">KL 1</th>
+                  <th class="price-item change-color">Giá</th>
+                  <th class="price-item change-color">
+                    <a href="javascript:;">
+                      <img src="./img/prev-icon.png" alt="prev-icon" />
+                    </a>
+                    <span>+/-</span>
+                    <a href="javascript:;">
+                      <img src="./img/next-icon.png" alt="next-icon" />
+                    </a>
+                  </th>
+                  <th class="price-item change-color">KL</th>
+                  <th class="price-item">Giá 3</th>
+                  <th class="price-item">KL 3</th>
+                  <th class="price-item">Giá 2</th>
+                  <th class="price-item">KL 2</th>
+                  <th class="price-item">Giá 1</th>
+                  <th class="price-item">KL 1</th>
+                  <th class="price-item change-color">Cao</th>
+                  <th class="price-item change-color">Thấp</th>
+                  <th class="price-item change-color">TB</th>
+                  <th class="price-item">Mua</th>
+                  <th class="price-item">Bán</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="box-data">
+                  <td class="green-col">AAA</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,5</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">29,50</td>
+                  <td class="green-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="yellow-col change-color">0.4</td>
+                  <td class="yellow-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">25,90</td>
+                  <td class="purple-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="red-col">AAM</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="red-col">19.3</td>
+                  <td class="red-col">44,5</td>
+                  <td class="red-col">19.35</td>
+                  <td class="red-col">29,50</td>
+                  <td class="red-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="red-col change-color">0.4</td>
+                  <td class="red-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="yellow-col">19.35</td>
+                  <td class="yellow-col">25,90</td>
+                  <td class="yellow-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAA</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,5</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">29,50</td>
+                  <td class="green-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="yellow-col change-color">0.4</td>
+                  <td class="yellow-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">25,90</td>
+                  <td class="purple-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="red-col">AAM</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="red-col">19.3</td>
+                  <td class="red-col">44,5</td>
+                  <td class="red-col">19.35</td>
+                  <td class="red-col">29,50</td>
+                  <td class="red-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="red-col change-color">0.4</td>
+                  <td class="red-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="yellow-col">19.35</td>
+                  <td class="yellow-col">25,90</td>
+                  <td class="yellow-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAA</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,5</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">29,50</td>
+                  <td class="green-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="yellow-col change-color">0.4</td>
+                  <td class="yellow-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">25,90</td>
+                  <td class="purple-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="red-col">AAM</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="red-col">19.3</td>
+                  <td class="red-col">44,5</td>
+                  <td class="red-col">19.35</td>
+                  <td class="red-col">29,50</td>
+                  <td class="red-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="red-col change-color">0.4</td>
+                  <td class="red-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="yellow-col">19.35</td>
+                  <td class="yellow-col">25,90</td>
+                  <td class="yellow-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAA</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,5</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">29,50</td>
+                  <td class="green-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="yellow-col change-color">0.4</td>
+                  <td class="yellow-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">25,90</td>
+                  <td class="purple-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAM</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="red-col">19.3</td>
+                  <td class="red-col">44,5</td>
+                  <td class="red-col">19.35</td>
+                  <td class="red-col">29,50</td>
+                  <td class="red-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="red-col change-color">0.4</td>
+                  <td class="red-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="yellow-col">19.35</td>
+                  <td class="yellow-col">25,90</td>
+                  <td class="yellow-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAA</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,5</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">29,50</td>
+                  <td class="green-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="yellow-col change-color">0.4</td>
+                  <td class="yellow-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">25,90</td>
+                  <td class="purple-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAM</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="red-col">19.3</td>
+                  <td class="red-col">44,5</td>
+                  <td class="red-col">19.35</td>
+                  <td class="red-col">29,50</td>
+                  <td class="red-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="red-col change-color">0.4</td>
+                  <td class="red-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="yellow-col">19.35</td>
+                  <td class="yellow-col">25,90</td>
+                  <td class="yellow-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAA</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,5</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">29,50</td>
+                  <td class="green-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="yellow-col change-color">0.4</td>
+                  <td class="yellow-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">25,90</td>
+                  <td class="purple-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAM</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="red-col">19.3</td>
+                  <td class="red-col">44,5</td>
+                  <td class="red-col">19.35</td>
+                  <td class="red-col">29,50</td>
+                  <td class="red-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="red-col change-color">0.4</td>
+                  <td class="red-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="yellow-col">19.35</td>
+                  <td class="yellow-col">25,90</td>
+                  <td class="yellow-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAA</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,5</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">29,50</td>
+                  <td class="green-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="yellow-col change-color">0.4</td>
+                  <td class="yellow-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">25,90</td>
+                  <td class="purple-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="red-col">AAM</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="red-col">19.3</td>
+                  <td class="red-col">44,5</td>
+                  <td class="red-col">19.35</td>
+                  <td class="red-col">29,50</td>
+                  <td class="red-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="red-col change-color">0.4</td>
+                  <td class="red-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="yellow-col">19.35</td>
+                  <td class="yellow-col">25,90</td>
+                  <td class="yellow-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAA</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,5</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">29,50</td>
+                  <td class="green-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="yellow-col change-color">0.4</td>
+                  <td class="yellow-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">25,90</td>
+                  <td class="purple-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAM</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="red-col">19.3</td>
+                  <td class="red-col">44,5</td>
+                  <td class="red-col">19.35</td>
+                  <td class="red-col">29,50</td>
+                  <td class="red-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="red-col change-color">0.4</td>
+                  <td class="red-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="yellow-col">19.35</td>
+                  <td class="yellow-col">25,90</td>
+                  <td class="yellow-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAA</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,5</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">29,50</td>
+                  <td class="green-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="yellow-col change-color">0.4</td>
+                  <td class="yellow-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">25,90</td>
+                  <td class="purple-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAM</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="red-col">19.3</td>
+                  <td class="red-col">44,5</td>
+                  <td class="red-col">19.35</td>
+                  <td class="red-col">29,50</td>
+                  <td class="red-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="red-col change-color">0.4</td>
+                  <td class="red-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="yellow-col">19.35</td>
+                  <td class="yellow-col">25,90</td>
+                  <td class="yellow-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="red-col">AAA</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,5</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">29,50</td>
+                  <td class="green-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="yellow-col change-color">0.4</td>
+                  <td class="yellow-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">25,90</td>
+                  <td class="purple-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAM</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="red-col">19.3</td>
+                  <td class="red-col">44,5</td>
+                  <td class="red-col">19.35</td>
+                  <td class="red-col">29,50</td>
+                  <td class="red-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="red-col change-color">0.4</td>
+                  <td class="red-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="yellow-col">19.35</td>
+                  <td class="yellow-col">25,90</td>
+                  <td class="yellow-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAA</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,5</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">29,50</td>
+                  <td class="green-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="yellow-col change-color">0.4</td>
+                  <td class="yellow-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">25,90</td>
+                  <td class="purple-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="red-col">AAM</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="red-col">19.3</td>
+                  <td class="red-col">44,5</td>
+                  <td class="red-col">19.35</td>
+                  <td class="red-col">29,50</td>
+                  <td class="red-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="red-col change-color">0.4</td>
+                  <td class="red-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="yellow-col">19.35</td>
+                  <td class="yellow-col">25,90</td>
+                  <td class="yellow-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAA</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,5</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">29,50</td>
+                  <td class="green-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="yellow-col change-color">0.4</td>
+                  <td class="yellow-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">25,90</td>
+                  <td class="purple-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAM</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="red-col">19.3</td>
+                  <td class="red-col">44,5</td>
+                  <td class="red-col">19.35</td>
+                  <td class="red-col">29,50</td>
+                  <td class="red-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="red-col change-color">0.4</td>
+                  <td class="red-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="yellow-col">19.35</td>
+                  <td class="yellow-col">25,90</td>
+                  <td class="yellow-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="red-col">AAA</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,5</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">29,50</td>
+                  <td class="green-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="yellow-col change-color">0.4</td>
+                  <td class="yellow-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">25,90</td>
+                  <td class="purple-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAM</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="red-col">19.3</td>
+                  <td class="red-col">44,5</td>
+                  <td class="red-col">19.35</td>
+                  <td class="red-col">29,50</td>
+                  <td class="red-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="red-col change-color">0.4</td>
+                  <td class="red-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="yellow-col">19.35</td>
+                  <td class="yellow-col">25,90</td>
+                  <td class="yellow-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAA</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,5</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">29,50</td>
+                  <td class="green-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="yellow-col change-color">0.4</td>
+                  <td class="yellow-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="green-col">19.35</td>
+                  <td class="green-col">25,90</td>
+                  <td class="purple-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+                <tr class="box-data">
+                  <td class="green-col">AAM</td>
+                  <td class="purple-col change-color">20.3</td>
+                  <td class="blue-col change-color">17.7</td>
+                  <td class="yellow-col change-color">19</td>
+                  <td class="red-col">19.3</td>
+                  <td class="red-col">44,5</td>
+                  <td class="red-col">19.35</td>
+                  <td class="red-col">29,50</td>
+                  <td class="red-col">19.4</td>
+                  <td class="green-col">24,80</td>
+                  <td class="yellow-col change-color">19.4</td>
+                  <td class="red-col change-color">0.4</td>
+                  <td class="red-col change-color">181,60</td>
+                  <td class="green-col">19.3</td>
+                  <td class="green-col">44,50</td>
+                  <td class="yellow-col">19.35</td>
+                  <td class="yellow-col">25,90</td>
+                  <td class="yellow-col">19.4</td>
+                  <td class="purple-col">24,80</td>
+                  <td class="white-col">24,196,90</td>
+                  <td class="green-col change-color">25,90</td>
+                  <td class="green-col change-color">19,4</td>
+                  <td class="green-col change-color">24,80</td>
+                  <td class="white-col">19.4</td>
+                  <td class="white-col">24,80</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <!--thumbnail-wrap  -->
