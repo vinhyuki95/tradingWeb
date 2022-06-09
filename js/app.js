@@ -8,20 +8,16 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-const logo = document.querySelector(".logo");
-const menuBox = document.querySelector(".menu__box");
-const turnOffMenu = document.querySelector(".fa-solid.fa-xmark ");
-const navHide = document.querySelector(".navHide");
-logo.onclick = function(){
-  if(menuBox.classList.contains("active")){
-    menuBox.classList.remove("active");
-  } else{
-    menuBox.classList.add("active");
-  }
-}
-turnOffMenu.onclick = function(){
-  menuBox.classList.remove("active");
-}
-menuBox.appendChild(navHide);
- 
+const menuHide = document.querySelector(".logo");
+const tabBox = document.querySelector(".tabBox");
+const navHide= document.querySelector(".navHide");
+const closeTab = document.querySelector(".fa-solid.fa-xmark");
 
+menuHide.onclick = function(){
+if(tabBox.classList.contains("active")){
+  tabBox.classList.remove("active");
+}else{
+  tabBox.classList.add("active");
+}
+};
+tabBox.appendChild(navHide);
