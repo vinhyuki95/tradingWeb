@@ -478,11 +478,12 @@ header {
   width: 100%;
   position: sticky;
   top: 0;
-  z-index: 111;
+  z-index: 1;
 }
 
 // header__wrap
 .header__wrap {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -591,14 +592,20 @@ header {
     height: 5px;
   }
 }
+
 .header__account {
   display: flex;
   align-items: center;
+  .account__box {
+    display: flex;
+    align-items: center;
+    span {
+      color: $col-white;
+      padding-right: 10px;
+    }
+  }
   .ring-box {
     padding: 0px 20px;
-    // .ring:hover {
-
-    // }
   }
   .avata-girl {
     padding: 0px 8px;
@@ -619,6 +626,59 @@ header {
 .navHide,
 .tabBox {
   display: none;
+}
+
+// css khi click vào tài khoản
+.header__account {
+  .account-dropdown {
+    position: absolute;
+    top: 61px;
+    right: -210px;
+    width: 210px;
+    height: 240px;
+    z-index: 2;
+    border-radius: 5px;
+    background-color: #292d38;
+    transition: right 500ms;
+    display: none;
+    .menu-item-logo {
+      height: 15px;
+      width: 15px;
+    }
+    .menu-item-name {
+      color: white;
+    }
+  }
+  // account-dropdown khi active
+  .account-dropdown.active {
+    right: 10px;
+    width: 230px;
+    height: 240px;
+    color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    .menu-item-container {
+      display: flex;
+      align-items: center;
+      padding: 9px 0px;
+      .menu-item-name {
+        padding-left: 15px;
+      }
+      .menu-item-name:hover {
+        color: $col-orange;
+      }
+    }
+    .menu-item-container:last-child {
+      margin-top: 10px;
+      padding: 20px 0px;
+      margin-top: 14px;
+      border-top: 1px solid #313645;
+      .menu-item-name {
+        color: $col-red-dt;
+      }
+    }
+  }
 }
 
 // chart__wrap
@@ -863,11 +923,40 @@ header {
         background-color: #292d38;
         border: none;
       }
+      a:focus {
+        background-color: #292d38;
+        border: none;
+      }
     }
   }
 }
 
-// table
+// nav-item-box show menu khi hover
+// .price-container {
+//   position: relative;
+// }
+.menuBox {
+  visibility: hidden;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  z-index: 10;
+  height: 142px;
+  width: 180px;
+  // padding: 15px 20px;
+  border-radius: 5px;
+  background-color: $col-black;
+  div {
+    padding: 8px 20px;
+  }
+}
+.nav-item-box:hover {
+  .menuBox {
+    visibility: visible;
+  }
+}
+
+// table-price
 .table-container::-webkit-scrollbar {
   width: 0 !important;
   display: none;
@@ -963,7 +1052,10 @@ header {
 }
 tbody {
   .box-data:hover {
-    background-color: rgb(70, 68, 68);
+    background-color: rgb(69, 70, 69);
+    .change-color {
+      background-color: rgb(69, 70, 69);
+    }
   }
 }
 // thumbnail__wrap
@@ -1045,7 +1137,18 @@ tbody {
     overflow-x: scroll;
   }
 }
-
+//thumbnail__wrap
+@media only screen and(max-width: 1809px) {
+  .thumbnail__wrap {
+    grid-template-columns: auto auto auto auto auto;
+    gap: 15px;
+    .thumbnail__board {
+      .thumbnail__top {
+        padding-right: 20px;
+      }
+    }
+  }
+}
 // respo-swipper
 @media only screen and(max-width:1476px) {
   .mySwiper {
@@ -1064,12 +1167,13 @@ tbody {
     }
   }
 }
-
+// thumbnail__wrap
 @media only screen and(max-width:1496px) {
   .thumbnail__wrap {
     overflow-x: scroll;
+    grid-template-columns: auto auto auto auto auto;
     .thumbnail__board {
-      min-width: 240px;
+      min-width: 300px;
       padding: 5px 10px;
     }
   }
@@ -1135,9 +1239,10 @@ tbody {
 }
 
 @media only screen and (max-width: 990px) {
-  // .logo {
-  //   display: none;
-  // }
+  .account-dropdown {
+    display: none;
+  }
+
   .header__content {
     .header__logo {
       a {
