@@ -415,7 +415,7 @@ header {
     height: 15px;
     width: 15px; }
   .header__account .account-dropdown .menu-item-name {
-    color: white; }
+    color: #e2e2e2; }
 .header__account .account-dropdown.active {
   right: 10px;
   width: 230px;
@@ -512,7 +512,6 @@ header {
   display: none; }
 
 .price__board {
-  overflow-x: auto;
   background-color: #292d38;
   display: flex;
   padding: 4px 0px;
@@ -621,20 +620,52 @@ header {
     background-color: #292d38;
     border: none; }
 
-.menuBox {
+.menu-top {
   visibility: hidden;
   position: absolute;
   top: 38px;
   left: 0;
   z-index: 10;
-  height: 142px;
-  width: 180px;
+  height: 170px;
+  width: 260px;
   border-radius: 5px;
-  background-color: #252424; }
-  .menuBox div {
+  background-color: #292d38;
+  padding-top: 5px;
+  color: #e2e2e2; }
+  .menu-top div {
     padding: 8px 20px; }
 
-.nav-item-box:hover .menuBox {
+.nav-item-hover:hover .menu-top {
+  visibility: visible; }
+
+.menu-top table thead tr th {
+  padding: 5px 10px; }
+.menu-top table thead tr th:hover {
+  background-color: #1d2029; }
+.menu-top table tbody tr td {
+  padding: 5px 10px; }
+.menu-top table tbody tr td:hover {
+  background-color: #1d2029; }
+
+.industry-hover {
+  position: relative; }
+  .industry-hover .menu-industry {
+    left: 0;
+    top: 38px;
+    position: absolute;
+    height: 300px;
+    width: 480px;
+    background-color: #292d38;
+    visibility: hidden;
+    padding: 10px; }
+    .industry-hover .menu-industry table thead {
+      font-size: 12px; }
+      .industry-hover .menu-industry table thead tr th {
+        padding: 4px 10px; }
+    .industry-hover .menu-industry table tbody tr td {
+      padding: 4px 10px; }
+
+.industry-hover:hover .menu-industry {
   visibility: visible; }
 
 .table-container::-webkit-scrollbar {

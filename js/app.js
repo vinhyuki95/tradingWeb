@@ -58,17 +58,19 @@ for(let i = 0; i<arr.length; i=i+1){
   menuItemContainer.appendChild(menuItemName);
 }
 
+// tạo slidebar khi click vào tài sản
+//selector element onlick
+// const headerWrap = document.querySelector(".header__wrap");
+// const assetSelector = document.querySelector(".navbar__item .asset");
+// const sidebarAssetContainer= document.createElement("div");
+// sidebarAssetContainer.classList.add("sidebar-asset-container");
+// headerWrap.appendChild(sidebarAssetContainer);
+// console.log(headerWrap);
 
-
-
-
-
-
-
-
-// const icon = arr[i][0];
-// const text = arr[i][1];
-
- // const newElement= document.createElement("div");
-  // newElement.innerHTML = valueBox+ arr[i];
-  // sideBarMenuContainer.appendChild(newElement);
+// assetSelector.onlick = function(){
+//   if(sidebarAssetContainer.classList.contains("active")){
+//     sidebarAssetContainer.classList.remove("active");
+//   }else{
+//     sidebarAssetContainer.classList.add("active");
+//   }
+// };

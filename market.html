@@ -45,34 +45,30 @@
                 <!--navbar -->
                 <ul class="navbar">
                   <li class="navbar__item">
-                    <a class="navbar__item-link" href="javscript:;">
+                    <a class="navbar__item-link" href="javascript:;">
                       Thị Trường
                     </a>
                   </li>
                   <li class="navbar__item">
-                    <a class="navbar__item-link" href="javscript:;"> Cơ sở </a>
+                    <a class="navbar__item-link" href="javascript:;"> Cơ sở </a>
                   </li>
                   <li class="navbar__item">
-                    <a class="navbar__item-link" href="javscript:;">
+                    <a class="navbar__item-link" href="javascript:;">
                       Phát sinh
                     </a>
                   </li>
                   <li class="navbar__item">
-                    <a
-                      onclick="openNav()"
-                      class="navbar__item-link"
-                      href="javscript:;"
-                    >
+                    <a class="navbar__item-link asset" href="javascript:;">
                       Tài sản
                     </a>
                   </li>
                   <li class="navbar__item">
-                    <a class="navbar__item-link" href="javscript:;">
+                    <a class="navbar__item-link" href="javascript:;">
                       Sổ lệnh
                     </a>
                   </li>
                   <li class="navbar__item">
-                    <a class="navbar__item-link" href="javscript:;">
+                    <a class="navbar__item-link" href="javascript:;">
                       Tiện ích
                     </a>
                   </li>
@@ -122,36 +118,34 @@
             <!--navhide -->
             <ul class="navHide">
               <li class="list">
-                <a class="list-item" href="javscript:;"> Thị Trường </a>
+                <a class="list-item" href="javascript:;"> Thị Trường </a>
               </li>
               <li class="list">
-                <a class="list-item" href="javscript:;"> Cơ sở </a>
+                <a class="list-item" href="javascript:;"> Cơ sở </a>
               </li>
               <li class="list">
-                <a class="list-item" href="javscript:;"> Phát sinh </a>
+                <a class="list-item" href="javascript:;"> Phát sinh </a>
               </li>
               <li class="list">
-                <a class="list-item" href="javscript:;"> Tài sản </a>
+                <a class="list-item" href="javascript:;"> Tài sản </a>
               </li>
               <li class="list">
-                <a class="list-item" href="javscript:;"> Sổ lệnh </a>
+                <a class="list-item" href="javascript:;"> Sổ lệnh </a>
               </li>
               <li class="list">
-                <a class="list-item" href="javscript:;"> Tiện ích </a>
+                <a class="list-item" href="javascript:;"> Tiện ích </a>
               </li>
               <li class="list">
-                <a class="list-item" href="javscript:;"> Giao dịch nhanh </a>
+                <a class="list-item" href="javascript:;"> Giao dịch nhanh </a>
               </li>
               <li class="list">
-                <a class="list-item" href="javscript:;">Tài khoản</a>
+                <a class="list-item" href="javascript:;">Tài khoản</a>
               </li>
               <li class="list">
-                <a class="list-item" href="javscript:;">Đăng xuất</a>
+                <a class="list-item" href="javascript:;">Đăng xuất</a>
               </li>
             </ul>
-            <div class="tabBox">
-              <!-- <i class="fa-solid fa-xmark"></i> -->
-            </div>
+            <div class="tabBox"></div>
             <div class="menuHide">
               <img src="./img/icon-menu.svg" alt="menuHide" />
             </div>
@@ -384,7 +378,7 @@
                     Ưu thích
                   </a>
                 </li>
-                <li class="nav-item nav-item-box">
+                <li class="nav-item nav-item-hover">
                   <a
                     class="nav-link"
                     href="#top"
@@ -397,10 +391,43 @@
                     Top
                     <img src="./img/dropdown-stick.png" alt="dropdown" />
                   </a>
-                  <div class="menuBox">
-                    <div>Tổng hợp</div>
-                    <div>HNX</div>
-                    <div>Lịch sử thỏa thuận</div>
+                  <div class="menu-top">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Tăng giá</th>
+                          <th>HSX</th>
+                          <th>HNX</th>
+                          <th>UpCOM</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Giảm giá</td>
+                          <td>HSX</td>
+                          <td>HNX</td>
+                          <td>UpCOM</td>
+                        </tr>
+                        <tr>
+                          <td>Khối lượng</td>
+                          <td>HSX</td>
+                          <td>HNX</td>
+                          <td>UpCOM</td>
+                        </tr>
+                        <tr>
+                          <td>NN mua</td>
+                          <td>HSX</td>
+                          <td>HNX</td>
+                          <td>UpCOM</td>
+                        </tr>
+                        <tr>
+                          <td>NN Bán</td>
+                          <td>HSX</td>
+                          <td>HNX</td>
+                          <td>UpCOM</td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                 </li>
                 <li class="nav-item">
@@ -475,7 +502,7 @@
                     >Thỏa thuận</a
                   >
                 </li>
-                <li class="nav-item">
+                <li class="nav-item industry-hover">
                   <a
                     class="nav-link"
                     href="#theo-nganh"
@@ -488,6 +515,54 @@
                     Theo ngành
                     <img src="./img/dropdown-stick.png" alt="dropdown" />
                   </a>
+                  <div class="menu-industry">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Thực phẩm & Đồ uống</th>
+                          <th>Hàng hóa và dịch vụ cộng nghệ</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Dịch vụ tiện ích</td>
+                          <td>Y tế</td>
+                        </tr>
+                        <tr>
+                          <td>Xây dựng & vật liệu</td>
+                          <td>Dịch vụ tài chính</td>
+                        </tr>
+                        <tr>
+                          <td>Ngân hàng</td>
+                          <td>Dịch vụ bán lẻ</td>
+                        </tr>
+                        <tr>
+                          <td>Viến Thông</td>
+                          <td>Tài nguyên</td>
+                        </tr>
+                        <tr>
+                          <td>Công nghêk</td>
+                          <td>Dầu khí</td>
+                        </tr>
+                        <tr>
+                          <td>Hóa Chất</td>
+                          <td>Bảo hiểm</td>
+                        </tr>
+                        <tr>
+                          <td>Du lịch & Giải trí</td>
+                          <td>Phương tiện truyền thông</td>
+                        </tr>
+                        <tr>
+                          <td>Đồ dùng cá nhân và đồ dùng gia dụng</td>
+                          <td>Ô tô & link kiện phụ tùng</td>
+                        </tr>
+                        <tr>
+                          <td>Bất động sản</td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </li>
                 <li class="nav-item">
                   <a

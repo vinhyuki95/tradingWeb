@@ -542,6 +542,22 @@ header {
   }
 }
 
+// sliderbar khi click tài sản
+// .header__wrap {
+//   .sidebar-asset-container {
+//     position: absolute;
+//     // left: -320px;
+//     width: 320px;
+//     height: 100vh;
+//     background-color: gray;
+//     transition: left 500ms;
+//     z-index: 111px;
+//   }
+//   .sidebar-asset-container.active {
+//     left: 0px;
+//   }
+// }
+// end sidebar khi lick tài sản
 // header__right
 .header__right {
   display: flex;
@@ -646,7 +662,7 @@ header {
       width: 15px;
     }
     .menu-item-name {
-      color: white;
+      color: #e2e2e2;
     }
   }
   // account-dropdown khi active
@@ -779,7 +795,7 @@ header {
 }
 
 .price__board {
-  overflow-x: auto;
+  // overflow-x: auto;
   background-color: #292d38;
   display: flex;
   padding: 4px 0px;
@@ -931,27 +947,88 @@ header {
   }
 }
 
-// nav-item-box show menu khi hover
-// .price-container {
-//   position: relative;
-// }
-.menuBox {
+// xử lý sự kiện khi hover top(nav-item)
+.menu-top {
   visibility: hidden;
   position: absolute;
   top: 38px;
   left: 0;
   z-index: 10;
-  height: 142px;
-  width: 180px;
-  // padding: 15px 20px;
+  height: 170px;
+  width: 260px;
   border-radius: 5px;
-  background-color: $col-black;
+  background-color: #292d38;
+  padding-top: 5px;
+  color: #e2e2e2;
   div {
     padding: 8px 20px;
   }
 }
-.nav-item-box:hover {
-  .menuBox {
+.nav-item-hover:hover {
+  .menu-top {
+    visibility: visible;
+  }
+}
+
+.menu-top {
+  table {
+    thead {
+      tr {
+        th {
+          padding: 5px 10px;
+        }
+        th:hover {
+          background-color: #1d2029;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          padding: 5px 10px;
+        }
+        td:hover {
+          background-color: #1d2029;
+        }
+      }
+    }
+  }
+}
+
+//xử lí sự kiện khi hover theo ngành
+.industry-hover {
+  position: relative;
+  .menu-industry {
+    left: 0;
+    top: 38px;
+    position: absolute;
+    height: 300px;
+    width: 480px;
+    background-color: #292d38;
+    visibility: hidden;
+    padding: 10px;
+    table {
+      thead {
+        font-size: 12px;
+        tr {
+          th {
+            padding: 4px 10px;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            padding: 4px 10px;
+          }
+        }
+      }
+    }
+  }
+}
+.industry-hover:hover {
+  .menu-industry {
     visibility: visible;
   }
 }
