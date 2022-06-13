@@ -48,14 +48,14 @@ assetElement.onclick = function(){
   }
 }
 
-const arrSidebarAsset=[["../../img/common-header/left-log.svg","Ẩn Menu"],["../../img/common-header/total-assets.png","Tổng tài sản","aa"]];
+const arrSidebarAsset=[["../../img/common-header/left-long.svg","Ẩn Menu"],["../../img/common-header/total-assets.png","Tổng tài sản","../../img/common-header/drop-up.png"]];
 console.log(arrSidebarAsset);
 for(let i=0; i<arrSidebarAsset.length; i=i+1){
   const menuContainer=document.createElement("div");
   menuContainer.classList.add("menu-container");
   sidebarAssetContainer.appendChild(menuContainer);
 
-  const itemLogo = document.createElement("div");
+  const itemLogo = document.createElement("img");
   itemLogo.classList.add("item-logo");
   itemLogo.src= arrSidebarAsset[i][0];
   menuContainer.appendChild(itemLogo);
@@ -67,10 +67,10 @@ for(let i=0; i<arrSidebarAsset.length; i=i+1){
   menuContainer.appendChild(itemNameAsset);
   console.log(itemNameAsset);
 
-  const dropdownLogo = document.createElement("div");
-  dropdownLogo.classList.add("dropdown-logo");
-  dropdownLogo.innerHTML = arrSidebarAsset[i][2];
-  menuContainer.appendChild(dropdownLogo);
-  console.log(dropdownLogo);
+  // const dropdownLogo = document.createElement("img");
+  // dropdownLogo.classList.add("dropdown-logo");
+  // dropdownLogo.src = arrSidebarAsset[i][2];
+  // menuContainer.appendChild(dropdownLogo);
+  // console.log(dropdownLogo);
 
 }
