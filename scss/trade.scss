@@ -100,16 +100,16 @@ body {
     width: 280px;
     height: calc(100vh - 60px);
     background-color: $bg-sidebar;
-    transform: left 500ms;
+    transition: left 500ms;
   }
   .sidebar-asset-container.active {
     left: 0px;
   }
 }
-.menu-container {
+.menu-item-container {
   padding: 20px;
 }
-.menu-container:first-child {
+.menu-item-container:first-child {
   display: flex;
   margin-bottom: 25px;
   img {
@@ -122,7 +122,7 @@ body {
     font-size: $font-14px;
   }
 }
-.menu-container:last-child {
+.menu-item-container:last-child {
   width: 220px;
   margin-top: 33px;
   align-items: center;
@@ -139,8 +139,51 @@ body {
     font-weight: 400;
   }
 }
+.dropdown-logo {
+  margin-left: auto;
+}
 
-// end event
+.menu-item-container {
+  position: relative;
+  .sub-container {
+    position: absolute;
+    top: 85px;
+    left: 0px;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    .sub-menu-item {
+      padding: 20px 10px;
+    }
+    .sub-menu-item:hover {
+      color: $col-orange;
+    }
+  }
+}
+// end event click tài sản
+
+// event click sổ lệnh
+.header__wrap {
+  position: relative;
+  .sidebar-orderbook {
+    position: absolute;
+    padding-top: 25px;
+    left: -300px;
+    top: 60px;
+    width: 280px;
+    height: calc(100vh - 60px);
+    background-color: $bg-sidebar;
+    transform: left 500ms;
+    z-index: 2;
+  }
+  .sidebar-orderbook.active {
+    left: 0;
+  }
+}
+
+// end-click sổ lệnh
 // header__right
 .header__right {
   display: flex;
