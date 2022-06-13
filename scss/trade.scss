@@ -1,5 +1,5 @@
 $bg-col: #131721;
-$bg-chart: #1d2029;
+$bg-sidebar: #1d2029;
 $col-white: #ffffff;
 $col-gray: #a0a3af;
 $col-orange: #e7ab21;
@@ -33,7 +33,7 @@ body {
   min-height: 100vh;
 }
 .header__wrap {
-  // position: relative;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,7 +67,6 @@ body {
 }
 
 .header__nav {
-  // padding-left: 30px;
   .navbar {
     display: flex;
     margin: 0px;
@@ -91,7 +90,29 @@ body {
     border-bottom: 2px solid $col-orange;
   }
 }
+//event khi click tài sản
+.header__wrap {
+  .sidebar-asset-container {
+    position: fixed;
+    left: -400px;
+    top: 60px;
+    width: 272px;
+    height: calc(100vh - 60px);
+    background-color: $bg-sidebar;
+    transform: left 500ms;
+  }
+  .sidebar-asset-container.active {
+    left: 0px;
+  }
+}
+.menu-container {
+  padding: 40px 20px;
+  .item-name {
+    color: white;
+  }
+}
 
+// end event
 // header__right
 .header__right {
   display: flex;

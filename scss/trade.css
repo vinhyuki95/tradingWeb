@@ -16,6 +16,7 @@ body {
 }
 
 .header__wrap {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -64,6 +65,26 @@ body {
 .navbar__item .navbar__item-link:active {
   color: #e7ab21;
   border-bottom: 2px solid #e7ab21;
+}
+
+.header__wrap .sidebar-asset-container {
+  position: fixed;
+  left: -400px;
+  top: 60px;
+  width: 272px;
+  height: calc(100vh - 60px);
+  background-color: #1d2029;
+  transform: left 500ms;
+}
+.header__wrap .sidebar-asset-container.active {
+  left: 0px;
+}
+
+.menu-container {
+  padding: 40px 20px;
+}
+.menu-container .item-name {
+  color: white;
 }
 
 .header__right {
