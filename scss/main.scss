@@ -542,27 +542,12 @@ header {
   }
 }
 
-// sliderbar khi click tài sản
-// .header__wrap {
-//   .sidebar-asset-container {
-//     position: absolute;
-//     // left: -320px;
-//     width: 320px;
-//     height: 100vh;
-//     background-color: gray;
-//     transition: left 500ms;
-//     z-index: 111px;
-//   }
-//   .sidebar-asset-container.active {
-//     left: 0px;
-//   }
-// }
-// end sidebar khi lick tài sản
 // header__right
 .header__right {
   display: flex;
   align-items: center;
 }
+
 .header__flex {
   display: flex;
   align-items: center;
@@ -795,7 +780,6 @@ header {
 }
 
 .price__board {
-  // overflow-x: auto;
   background-color: #292d38;
   display: flex;
   padding: 4px 0px;
@@ -827,6 +811,10 @@ header {
       }
     }
   }
+}
+
+img.deepzoom {
+  margin-top: 13px;
 }
 
 .price__left {
@@ -1244,6 +1232,15 @@ tbody {
     }
   }
 }
+.price__board::-webkit-scrollbar {
+  width: 0 !important;
+  display: none;
+}
+@media only screen and(max-width: 1219px) {
+  .price__board {
+    overflow-x: auto;
+  }
+}
 // thumbnail__wrap
 @media only screen and(max-width:1496px) {
   .thumbnail__wrap {
@@ -1410,4 +1407,9 @@ tbody {
   //   padding-left: 4px;
   //   cursor: pointer;
   // }
+}
+
+//Trading
+.container {
+  color: red;
 }

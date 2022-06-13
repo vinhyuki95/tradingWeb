@@ -529,6 +529,9 @@ header {
 .price__left .nav-pills .active a:hover {
   background-color: none; }
 
+img.deepzoom {
+  margin-top: 13px; }
+
 .price__left {
   display: flex; }
   .price__left .block__search {
@@ -809,6 +812,13 @@ tbody .box-data:hover {
 @media only screen and (max-width: 1322px) {
   .price__left .nav-pills .nav-item {
     padding: 0px 5px; } }
+.price__board::-webkit-scrollbar {
+  width: 0 !important;
+  display: none; }
+
+@media only screen and (max-width: 1219px) {
+  .price__board {
+    overflow-x: auto; } }
 @media only screen and (max-width: 1496px) {
   .thumbnail__wrap {
     overflow-x: scroll;
@@ -910,5 +920,7 @@ tbody .box-data:hover {
 
   .logo {
     cursor: pointer; } }
+.container {
+  color: red; }
 
 /*# sourceMappingURL=main.css.map */

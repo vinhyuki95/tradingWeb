@@ -5,140 +5,149 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trade</title>
-    <link rel="stylesheet" href="./scss/main.scss" />
+    <link rel="stylesheet" href="./scss/trade.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./scss/stylesheet.css" />
   </head>
   <body>
     <div id="root">
-      <header>
-        <!-- header__wrap -->
-        <div class="header__wrap">
-          <!-- header__left -->
-          <div class="header__left">
-            <div class="header__content">
-              <div class="header__logo">
-                <a class="menu__box" href="javascript:;">
-                  <i class="fa-solid fa-xmark"></i>
-                </a>
-                <img class="logo" src="./img/icon-menu.svg" alt="menu-icon" />
-                <a href="javascript:;">
-                  <img
-                    class="lg-name"
-                    src="./img/Logo-name(market).svg"
-                    alt="lg-name"
-                  />
-                </a>
-              </div>
-              <div class="header__nav">
-                <!--navbar -->
-                <ul class="navbar">
-                  <li class="navbar__item">
-                    <a class="navbar__item-link" href="javascript:;">
-                      Thị Trường
-                    </a>
-                  </li>
-                  <li class="navbar__item">
-                    <a class="navbar__item-link" href="javascript:;"> Cơ sở </a>
-                  </li>
-                  <li class="navbar__item">
-                    <a class="navbar__item-link" href="javascript:;">
-                      Phát sinh
-                    </a>
-                  </li>
-                  <li class="navbar__item">
-                    <a class="navbar__item-link asset" href="javascript:;">
-                      Tài sản
-                    </a>
-                  </li>
-                  <li class="navbar__item">
-                    <a class="navbar__item-link" href="javascript:;">
-                      Sổ lệnh
-                    </a>
-                  </li>
-                  <li class="navbar__item">
-                    <a class="navbar__item-link" href="javascript:;">
-                      Tiện ích
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- header-right -->
-          <div class="header__right">
-            <div class="header__flex">
-              <img
-                class="img-transaction"
-                src="./img/icon giao dich nhanh.svg"
-                alt="img-transaction"
-              />
-              <span>Giao dịch nhanh</span>
-              <div class="star">
-                <img src="./img/Star 6-icon.svg" alt="star" />
-              </div>
-              <p>Tiếng Việt</p>
-              <img
-                class="dropdown-icon"
-                src="./img/dropdown-icon.svg"
-                alt="dropdown-icon"
-              />
-            </div>
-            <!-- account -->
-            <div class="header__account">
-              <div class="ring-box">
-                <img class="ring" src="./img/ring-icon.png" alt="ring" />
-              </div>
-              <!-- account__box-->
-              <div class="account__box">
+      <div class="header__wrap">
+        <!-- header__left -->
+        <div class="header__left">
+          <div class="header__content">
+            <div class="header__logo">
+              <a class="menu__box" href="javascript:;">
+                <i class="fa-solid fa-xmark"></i>
+              </a>
+              <img class="logo" src="./img/icon-menu.svg" alt="menu-icon" />
+              <a href="javascript:;">
                 <img
-                  class="avata-girl"
-                  src="./img/img-girl.png"
-                  alt="avata-girl"
+                  class="lg-name"
+                  src="./img/Logo-name(market).svg"
+                  alt="lg-name"
                 />
-                <span>lutuananh</span>
-              </div>
-              <img
-                class="dropdown-icon"
-                src="./img/dropdown-icon.svg"
-                alt="dropdown-icon"
-              />
+              </a>
             </div>
-            <!--navhide -->
-            <ul class="navHide">
-              <li class="list">
-                <a class="list-item" href="javascript:;"> Thị Trường </a>
-              </li>
-              <li class="list">
-                <a class="list-item" href="javascript:;"> Cơ sở </a>
-              </li>
-              <li class="list">
-                <a class="list-item" href="javascript:;"> Phát sinh </a>
-              </li>
-              <li class="list">
-                <a class="list-item" href="javascript:;"> Tài sản </a>
-              </li>
-              <li class="list">
-                <a class="list-item" href="javascript:;"> Sổ lệnh </a>
-              </li>
-              <li class="list">
-                <a class="list-item" href="javascript:;"> Tiện ích </a>
-              </li>
-              <li class="list">
-                <a class="list-item" href="javascript:;"> Giao dịch nhanh </a>
-              </li>
-              <li class="list">
-                <a class="list-item" href="javascript:;">Tài khoản</a>
-              </li>
-              <li class="list">
-                <a class="list-item" href="javascript:;">Đăng xuất</a>
-              </li>
-            </ul>
-            <div class="tabBox"></div>
-            <div class="menuHide">
-              <img src="./img/icon-menu.svg" alt="menuHide" />
+            <div class="header__nav">
+              <!--navbar -->
+              <ul class="navbar">
+                <li class="navbar__item">
+                  <a class="navbar__item-link" href="javascript:;">
+                    Thị Trường
+                  </a>
+                </li>
+                <li class="navbar__item">
+                  <a class="navbar__item-link" href="javascript:;"> Cơ sở </a>
+                </li>
+                <li class="navbar__item">
+                  <a class="navbar__item-link" href="javascript:;">
+                    Phát sinh
+                  </a>
+                </li>
+                <li class="navbar__item">
+                  <a class="navbar__item-link asset" href="javascript:;">
+                    Tài sản
+                  </a>
+                </li>
+                <li class="navbar__item">
+                  <a class="navbar__item-link" href="javascript:;"> Sổ lệnh </a>
+                </li>
+                <li class="navbar__item">
+                  <a class="navbar__item-link" href="javascript:;">
+                    Tiện ích
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </header>
+        <!-- header-right -->
+        <div class="header__right">
+          <div class="header__flex">
+            <img
+              class="img-transaction"
+              src="./img/icon giao dich nhanh.svg"
+              alt="img-transaction"
+            />
+            <span>Giao dịch nhanh</span>
+            <div class="star">
+              <img src="./img/Star 6-icon.svg" alt="star" />
+            </div>
+            <p>Tiếng Việt</p>
+            <img
+              class="dropdown-icon"
+              src="./img/dropdown-icon.svg"
+              alt="dropdown-icon"
+            />
+          </div>
+          <!-- account -->
+          <div class="header__account">
+            <div class="ring-box">
+              <img class="ring" src="./img/ring-icon.png" alt="ring" />
+            </div>
+            <!-- account__box-->
+            <div class="account__box">
+              <img
+                class="avata-girl"
+                src="./img/img-girl.png"
+                alt="avata-girl"
+              />
+              <span>lutuananh</span>
+            </div>
+            <img
+              class="dropdown-icon"
+              src="./img/dropdown-icon.svg"
+              alt="dropdown-icon"
+            />
+          </div>
+          <!--navhide -->
+          <ul class="navHide">
+            <li class="list">
+              <a class="list-item" href="javascript:;"> Thị Trường </a>
+            </li>
+            <li class="list">
+              <a class="list-item" href="javascript:;"> Cơ sở </a>
+            </li>
+            <li class="list">
+              <a class="list-item" href="javascript:;"> Phát sinh </a>
+            </li>
+            <li class="list">
+              <a class="list-item" href="javascript:;"> Tài sản </a>
+            </li>
+            <li class="list">
+              <a class="list-item" href="javascript:;"> Sổ lệnh </a>
+            </li>
+            <li class="list">
+              <a class="list-item" href="javascript:;"> Tiện ích </a>
+            </li>
+            <li class="list">
+              <a class="list-item" href="javascript:;"> Giao dịch nhanh </a>
+            </li>
+            <li class="list">
+              <a class="list-item" href="javascript:;">Tài khoản</a>
+            </li>
+            <li class="list">
+              <a class="list-item" href="javascript:;">Đăng xuất</a>
+            </li>
+          </ul>
+          <div class="tabBox"></div>
+          <div class="menuHide">
+            <img
+              class="icon-menuHide"
+              src="./img/menuHide.svg"
+              alt="menuHide"
+            />
+          </div>
+        </div>
+      </div>
     </div>
+    <script src="./js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </body>
 </html>
