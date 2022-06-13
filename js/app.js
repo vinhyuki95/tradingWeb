@@ -6,6 +6,7 @@ var swiper = new Swiper(".mySwiper", {
       slidesPerView: 4.5,
     },  
   },
+});
 
 //Selector element(xử lý sự kiện khi click vào menu ở màn hình 990px)
 const menuHide = document.querySelector(".logo");
@@ -13,7 +14,6 @@ const tabBox = document.querySelector(".tabBox");
 const navHide= document.querySelector(".navHide");
 const closeTab = document.querySelector(".fa-solid.fa-xmark");
 
-});
 //click menu-icon ở màn hình 990px show sidebar
 menuHide.onclick = function(){
 if(tabBox.classList.contains("active")){
