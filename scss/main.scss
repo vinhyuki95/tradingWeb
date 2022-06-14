@@ -1048,10 +1048,10 @@ img.deepzoom {
 }
 
 // table-price
-.table-container::-webkit-scrollbar {
-  width: 0 !important;
-  display: none;
-}
+// .table-container::-webkit-scrollbar {
+//   width: 0 !important;
+//   display: none;
+// }
 
 .table-container {
   max-height: calc(100vh - 254px);

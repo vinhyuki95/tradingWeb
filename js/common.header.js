@@ -67,6 +67,7 @@ const arrSidebarAsset=[
     ]
   ]
 ];
+console.log(arrSidebarAsset);
 for(let i=0; i<arrSidebarAsset.length; i=i+1){
   const menuItemContainer=document.createElement("div");
   menuItemContainer.classList.add("menu-item-container");
@@ -113,52 +114,41 @@ for(let i=0; i<arrSidebarAsset.length; i=i+1){
     subContainer.appendChild(submenuItem3);
     
     menuItemContainer.appendChild(subContainer);
-
   }
-  
-
-
-
 };
-//  const menuItemElement= document.querySelector(".menu-item-container:nth-child(2)");
-//  menuItemElement.classList.add("menu-bottom");
-//  console.log(menuItemElement);
-
-//  const dropdownLogo = document.querySelector(".dropdown-logo");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // click sổ lệnh
+// selector element được click và tạo element để sidebar
 const headerWrap = document.querySelector(".header__wrap");
 const orderBookElement = document.querySelector(".order-book");
 const sidebarOrderBook = document.createElement("div");
  sidebarOrderBook.classList.add("sidebar-orderbook");
  headerWrap.appendChild(sidebarOrderBook);
 
-
+// khi click vào sổ lệnh sidebarOrderBook sẽ đc avtive;
  orderBookElement.onclick = function(){
-  // sidebarOrderBook.classList.toggle("active");
-  if(sidebarOrderBook.classList.contains("active")){
-    sidebarOrderBook.classList.remove("active");
-  } else{
-    sidebarOrderBook.classList.add("active");
-    console.log(sidebarOrderBook);
-  }
+  sidebarOrderBook.classList.toggle("active");
  }
+
+const arrOderBook = [
+    ["../../img/common-header/left-long.svg","Ẩn Menu"],
+    [
+     "../../img/common-header/base-command.png",
+     "Lệnh CK cơ sở",
+     "../../img/common-header/drop-up.png"
+    ],
+    ["../../img/common-header/derivative-order.png",
+     "Lệnh phái sinh",
+     "../../img/common-header/drop-up.png"
+    ],
+    ["../../img/common-header/loan-history.png",
+    "Lịch sử vay",
+    "../../img/common-header/drop-up.png"
+    ]
+    ];
+ 
+for(let i = 0; i<arrOderBook.length; i=i+1){
+  const menuItemContainer = document.createElement("div");
+  menuItemContainer.classList.add("orderBook-container");
+
+}

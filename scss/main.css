@@ -682,10 +682,6 @@ img.deepzoom {
 .industry-hover:hover .menu-industry {
   visibility: visible; }
 
-.table-container::-webkit-scrollbar {
-  width: 0 !important;
-  display: none; }
-
 .table-container {
   max-height: calc(100vh - 254px);
   height: 100vh;
