@@ -162,12 +162,17 @@ body {
     display: flex;
     flex-direction: column;
     color: #6f767e;
+    visibility: hidden;
+    transition: 500ms;
     .sub-menu-item {
       padding: 15px 35px;
     }
     .sub-menu-item:hover {
       color: #c5bdbd;
     }
+  }
+  .sub-container.active {
+    visibility: visible;
   }
 }
 // end event click tài sản

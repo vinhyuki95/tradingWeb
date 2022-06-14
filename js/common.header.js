@@ -93,7 +93,6 @@ for(let i=0; i<arrSidebarAsset.length; i=i+1){
     }
   };
   
-  
   if(arrSidebarAsset[i][3]!== undefined){
     const subContainer= document.createElement("div");
     subContainer.classList.add("sub-container");
@@ -116,6 +115,11 @@ for(let i=0; i<arrSidebarAsset.length; i=i+1){
     menuItemContainer.appendChild(subContainer);
   }
 };
+const itemLogoOnclick = document.querySelector(".menu-item-container:last-child .dropdown-logo");
+const subContainer = document.querySelector(".sub-container");
+itemLogoOnclick.onclick = function(){
+  subContainer.classList.toggle("active");
+}
 
 // click sổ lệnh
 // selector element được click và tạo element để sidebar

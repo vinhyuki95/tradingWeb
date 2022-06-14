@@ -141,12 +141,17 @@ body {
   display: flex;
   flex-direction: column;
   color: #6f767e;
+  visibility: hidden;
+  transition: 500ms;
 }
 .menu-item-container .sub-container .sub-menu-item {
   padding: 15px 35px;
 }
 .menu-item-container .sub-container .sub-menu-item:hover {
   color: #c5bdbd;
+}
+.menu-item-container .sub-container.active {
+  visibility: visible;
 }
 
 .header__wrap {
