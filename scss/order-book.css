@@ -142,7 +142,6 @@ body {
   flex-direction: column;
   color: #6f767e;
   visibility: hidden;
-  transition: 500ms;
 }
 .menu-item-container .sub-container .sub-menu-item {
   padding: 15px 35px;
@@ -225,11 +224,10 @@ body {
   height: 100px;
   left: 50px;
   top: 30px;
+  width: 70%;
+  visibility: hidden;
 }
 
-.submenu__container {
-  width: 70%;
-}
 .submenu__container .submenu-item {
   color: #6f767e;
   padding: 8px 0px 8px 10px;
@@ -238,6 +236,10 @@ body {
   background-color: #292d38;
   border-radius: 10px;
   color: #ffffff;
+}
+
+.orderBook__container .submenu__container.active {
+  visibility: visible;
 }
 
 .header__right {

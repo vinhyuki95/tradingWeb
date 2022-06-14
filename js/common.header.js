@@ -113,13 +113,13 @@ for(let i=0; i<arrSidebarAsset.length; i=i+1){
     subContainer.appendChild(submenuItem3);
     
     menuItemContainer.appendChild(subContainer);
-  }
-};
-const itemLogoOnclick = document.querySelector(".menu-item-container:last-child .dropdown-logo");
-const subContainer = document.querySelector(".sub-container");
-itemLogoOnclick.onclick = function(){
-  subContainer.classList.toggle("active");
-}
+    const itemLogoOnclick = document.querySelector(".menu-item-container:last-child .dropdown-logo");
+    itemLogoOnclick.onclick = function(){
+    subContainer.classList.toggle("active");
+    }
+  };
+ }
+
 
 // click sổ lệnh
 // selector element được click và tạo element để sidebar
@@ -182,44 +182,55 @@ for(let i = 0; i<arrOderBook.length; i=i+1){
   itemName.innerHTML=arrOderBook[i][1];
   menuItemContainer.appendChild(itemName);
 
-  if(arrOderBook[i][2] !== undefined){
-   const dropdownLogo=document.createElement("img");
-   dropdownLogo.classList.add("dropdown-orderBook-logo");
-   dropdownLogo.src=arrOderBook[i][2];
-   menuItemContainer.appendChild(dropdownLogo);
-  };
+  // if(arrOderBook[i][2] !== undefined){
+  //  const dropdownLogo=document.createElement("img");
+  //  dropdownLogo.classList.add("dropdown-orderBook-logo");
+  //  dropdownLogo.src=arrOderBook[i][2];
+  //  menuItemContainer.appendChild(dropdownLogo);
+  // };
 
-  if(arrOderBook[i][3] !== undefined){
-    const subMenuContainer=document.createElement("div");
+  // 2 đk này xảy ra cùng 1 lúc nên phải xảy ra cùng nhau 
+  if(arrOderBook[i][3] !== undefined && arrOderBook[i][2] !== undefined){
+    const dropdownLogo=document.createElement("img");
+    dropdownLogo.classList.add("dropdown-orderBook-logo");
+    dropdownLogo.src=arrOderBook[i][2];
+    menuItemContainer.appendChild(dropdownLogo);
+
+    const subMenuContainer = document.createElement("div");
     subMenuContainer.classList.add("submenu__container");
+    menuItemContainer.appendChild(subMenuContainer);
+
+    //onclick dropdownLogo
+    dropdownLogo.onclick = function(){
+      subMenuContainer.classList.toggle("active");
+    }
 
     const subMenuItem1 = document.createElement("div");
      subMenuItem1.classList.add("submenu-item");
      subMenuItem1.innerHTML = arrOderBook[i][3][0];
      subMenuContainer.appendChild(subMenuItem1);
 
-    const subMenuItem2=document.createElement("div");
+    const subMenuItem2 = document.createElement("div");
     subMenuItem2.classList.add("submenu-item")
     subMenuItem2.innerHTML=arrOderBook[i][3][1];
     subMenuContainer.appendChild(subMenuItem2);
 
-    const subMenuItem3=document.createElement("div");
+    const subMenuItem3 = document.createElement("div");
     subMenuItem3.classList.add("submenu-item")
-    subMenuItem3.innerHTML=arrOderBook[i][3][2];
+    subMenuItem3.innerHTML = arrOderBook[i][3][2];
     subMenuContainer.appendChild(subMenuItem3);
-    
-    if(arrOderBook[i][3][3] !== undefined){
-      const subMenuItem4=document.createElement("div");
-      subMenuItem4.classList.add("submenu-item")
-      subMenuItem4.innerHTML=arrOderBook[i][3][3];
-      subMenuContainer.appendChild(subMenuItem4);
-    }
-    
 
-    menuItemContainer.appendChild(subMenuContainer);
-  };
- 
+    if(arrOderBook[i][3][3] !== undefined){
+      const subMenuItem4 = document.createElement("div");
+      subMenuItem4.classList.add("submenu-item")
+      subMenuItem4.innerHTML = arrOderBook[i][3][3];
+      subMenuContainer.appendChild(subMenuItem4);
+    };
+  } 
 };
+
+
+
 //click icon mũi tên turnoff sidebar
 const turnOffSidebarAsset = document.querySelector(".menu-item-container:first-child img");
 turnOffSidebarAsset.onclick = function(){
@@ -229,3 +240,16 @@ const turnOffSidebarOrderBook= document.querySelector(".orderBook__container:fir
 turnOffSidebarOrderBook.onclick = function(){
   sidebarOrderBook.classList.remove("active");
 }
+
+
+
+// //onclick dropdowm-toggle submenu-container
+// const itemLogoClick = document.querySelectorAll(".dropdown-orderBook-logo");
+// const subMenuContainer = document.querySelector(".submenu__container");
+// for(let i=0; i<itemLogoClick.length; i=i+1){
+//   const dropdownLogo = itemLogoClick[i];
+//   dropdownLogo.onclick = function(){
+//   subMenuContainer.classList.toggle("active");   
+//   console.log(dropdownLogo);
+//   };
+// }
