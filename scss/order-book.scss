@@ -108,10 +108,6 @@ body {
 }
 .menu-item-container {
   padding: 20px;
-  .item-logo {
-    filter: invert(78%) sepia(68%) saturate(956%) hue-rotate(339deg)
-      brightness(92%) contrast(96%);
-  }
 }
 .menu-item-container:first-child {
   display: flex;
@@ -275,8 +271,7 @@ body {
   padding: 0px 10px;
   margin-bottom: 5px;
   .icon-menuHide {
-    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(158deg)
-      brightness(106%) contrast(101%);
+    color: white;
   }
 }
 

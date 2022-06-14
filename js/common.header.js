@@ -25,7 +25,7 @@ const arr= [
 ];
 for(let i = 0; i<arr.length; i=i+1){
   const menuItemContainer = document.createElement("div");
-  menuItemContainer.classList.add("menu-item-container");
+  menuItemContainer.classList.add("item-container");
   sideBarMenuItemContainer.appendChild(menuItemContainer);
 
   const menuItemLogo= document.createElement("img");

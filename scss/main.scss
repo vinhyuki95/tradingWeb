@@ -629,13 +629,14 @@ header {
   display: none;
 }
 
+// css khi click vào tài khoản
 .header__account {
   .account-dropdown {
     position: fixed;
     top: 61px;
     right: -300px;
-    width: 250px;
-    height: 255px;
+    width: 220px;
+    height: 270px;
     z-index: 2;
     border-radius: 3px;
     background-color: #292d38;
@@ -644,7 +645,7 @@ header {
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
-    .menu-item-container {
+    .item-container {
       display: flex;
       align-items: center;
       padding: 9px 0px;
@@ -655,7 +656,7 @@ header {
         color: $col-orange;
       }
     }
-    .menu-item-container:last-child {
+    .item-container:last-child {
       margin-top: 10px;
       padding: 20px 0px;
       margin-top: 14px;
@@ -675,7 +676,7 @@ header {
   // account-dropdown khi active
   .account-dropdown.active {
     right: 10px;
-    item-container:last-child {
+    .item-container:last-child {
       margin-top: 10px;
       padding: 20px 0px;
       margin-top: 14px;
@@ -939,6 +940,26 @@ img.deepzoom {
     }
   }
 }
+.price__right {
+  .nav-pills {
+    .nav-item {
+      .nav-link {
+        .detail-box {
+          filter: invert(59%) sepia(1%) saturate(2599%) hue-rotate(180deg)
+            brightness(83%) contrast(94%);
+        }
+        .detail-box:hover {
+          filter: invert(69%) sepia(85%) saturate(499%) hue-rotate(346deg)
+            brightness(96%) contrast(88%);
+        }
+        .thumbnail-icon:hover {
+          filter: invert(69%) sepia(85%) saturate(499%) hue-rotate(346deg)
+            brightness(96%) contrast(88%);
+        }
+      }
+    }
+  }
+}
 
 // xử lý sự kiện khi hover top(nav-item)
 .menu-top {
@@ -1197,7 +1218,6 @@ tbody {
 }
 
 //responsive-header
-
 .overflow::-webkit-scrollbar {
   width: 0 !important;
   display: none;
@@ -1414,7 +1434,7 @@ tbody {
   // }
 }
 
-//Trading
-.container {
-  color: red;
+.sidebar-asset-container,
+.sidebar-orderbook {
+  display: none;
 }

@@ -404,8 +404,8 @@ header {
   position: fixed;
   top: 61px;
   right: -300px;
-  width: 250px;
-  height: 255px;
+  width: 220px;
+  height: 270px;
   z-index: 2;
   border-radius: 3px;
   background-color: #292d38;
@@ -414,20 +414,20 @@ header {
   display: flex;
   flex-direction: column;
   padding: 10px 20px; }
-  .header__account .account-dropdown .menu-item-container {
+  .header__account .account-dropdown .item-container {
     display: flex;
     align-items: center;
     padding: 9px 0px; }
-    .header__account .account-dropdown .menu-item-container .menu-item-name {
+    .header__account .account-dropdown .item-container .menu-item-name {
       padding-left: 15px; }
-    .header__account .account-dropdown .menu-item-container .menu-item-name:hover {
+    .header__account .account-dropdown .item-container .menu-item-name:hover {
       color: #e7ab21; }
-  .header__account .account-dropdown .menu-item-container:last-child {
+  .header__account .account-dropdown .item-container:last-child {
     margin-top: 10px;
     padding: 20px 0px;
     margin-top: 14px;
     border-top: 1px solid #313645; }
-    .header__account .account-dropdown .menu-item-container:last-child .menu-item-name {
+    .header__account .account-dropdown .item-container:last-child .menu-item-name {
       color: #cf422f; }
   .header__account .account-dropdown .menu-item-logo {
     height: 15px;
@@ -436,12 +436,12 @@ header {
     color: #e2e2e2; }
 .header__account .account-dropdown.active {
   right: 10px; }
-  .header__account .account-dropdown.active item-container:last-child {
+  .header__account .account-dropdown.active .item-container:last-child {
     margin-top: 10px;
     padding: 20px 0px;
     margin-top: 14px;
     border-top: 1px solid #313645; }
-    .header__account .account-dropdown.active item-container:last-child .menu-item-name {
+    .header__account .account-dropdown.active .item-container:last-child .menu-item-name {
       color: #cf422f; }
 
 .swiper {
@@ -626,6 +626,13 @@ img.deepzoom {
   .price__right .nav-pills .nav-item a:focus {
     background-color: #292d38;
     border: none; }
+
+.price__right .nav-pills .nav-item .nav-link .detail-box {
+  filter: invert(59%) sepia(1%) saturate(2599%) hue-rotate(180deg) brightness(83%) contrast(94%); }
+.price__right .nav-pills .nav-item .nav-link .detail-box:hover {
+  filter: invert(69%) sepia(85%) saturate(499%) hue-rotate(346deg) brightness(96%) contrast(88%); }
+.price__right .nav-pills .nav-item .nav-link .thumbnail-icon:hover {
+  filter: invert(69%) sepia(85%) saturate(499%) hue-rotate(346deg) brightness(96%) contrast(88%); }
 
 .menu-top {
   visibility: hidden;
@@ -924,7 +931,8 @@ tbody .box-data:hover {
 
   .logo {
     cursor: pointer; } }
-.container {
-  color: red; }
+.sidebar-asset-container,
+.sidebar-orderbook {
+  display: none; }
 
 /*# sourceMappingURL=main.css.map */
