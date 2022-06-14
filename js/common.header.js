@@ -1,5 +1,5 @@
 
-// selector element (sử lý sự kiện khi click vào account)
+// sự kiện khi click vào tài khoản
 const accountBox = document.querySelector(".account__box");
 const headerAccount=document.querySelector(".header__account");
 // create new element then add a class
@@ -39,7 +39,7 @@ for(let i = 0; i<arr.length; i=i+1){
   menuItemContainer.appendChild(menuItemName);
 }
 
-//xử lí sự kiện khi click tài sản
+//sự kiện khi click tài sản
 // selector element được click
 const assetElement = document.querySelector(".asset");
 const headerWrapElement = document.querySelector(".header__wrap");
@@ -67,7 +67,7 @@ const arrSidebarAsset=[
     ]
   ]
 ];
-console.log(arrSidebarAsset);
+
 for(let i=0; i<arrSidebarAsset.length; i=i+1){
   const menuItemContainer=document.createElement("div");
   menuItemContainer.classList.add("menu-item-container");
@@ -135,30 +135,31 @@ const arrOderBook = [
     [
      "../../img/common-header/base-command.png",
      "Lệnh CK cơ sở",
-     "../../img/common-header/drop-up.png"
-      // [
-      //   "Lệnh Chờ ",
-      //   "Lịch sử đặt lệnh",
-      //   "Lịch sử giao dịch",
-      //   "Lệnh điều kiện"
-      // ]
+     "../../img/common-header/drop-up.png",
+      [
+        "Lệnh Chờ ",
+        "Lịch sử đặt lệnh",
+        "Lịch sử giao dịch",
+        "Lệnh điều kiện"
+      ]
     ],
     ["../../img/common-header/derivative-order.png",
      "Lệnh phái sinh",
-     "../../img/common-header/drop-up.png"
-      // [
-      //   "Vị thế mở",
-      //   "Vị thế đóng",
-      //   "Lịch sử đặt lệnh"
-      // ]
+     "../../img/common-header/drop-up.png",
+      [
+        "Vị thế mở",
+        "Vị thế đóng",
+        "Lịch sử đặt lệnh"
+      ]
     ],
     ["../../img/common-header/loan-history.png",
     "Lịch sử vay",
-    "../../img/common-header/drop-up.png"
-      // [
-      //   "Hợp đồng vay đang mở",
-      //   "Lịch sử trả nợ",
-      //   "Lịch sử vay"]
+    "../../img/common-header/drop-up.png",
+      [
+        "Hợp đồng vay đang mở",
+        "Lịch sử trả nợ",
+        "Lịch sử vay"
+      ]
     ]
     ];
  
@@ -184,4 +185,43 @@ for(let i = 0; i<arrOderBook.length; i=i+1){
    menuItemContainer.appendChild(dropdownLogo);
   };
 
+  if(arrOderBook[i][3] !== undefined){
+    const subMenuContainer=document.createElement("div");
+    subMenuContainer.classList.add("submenu__container");
+
+    const subMenuItem1 = document.createElement("div");
+     subMenuItem1.classList.add("submenu-item");
+     subMenuItem1.innerHTML = arrOderBook[i][3][0];
+     subMenuContainer.appendChild(subMenuItem1);
+
+    const subMenuItem2=document.createElement("div");
+    subMenuItem2.classList.add("submenu-item")
+    subMenuItem2.innerHTML=arrOderBook[i][3][1];
+    subMenuContainer.appendChild(subMenuItem2);
+
+    const subMenuItem3=document.createElement("div");
+    subMenuItem3.classList.add("submenu-item")
+    subMenuItem3.innerHTML=arrOderBook[i][3][2];
+    subMenuContainer.appendChild(subMenuItem3);
+    
+    if(arrOderBook[i][3][3] !== undefined){
+      const subMenuItem4=document.createElement("div");
+      subMenuItem4.classList.add("submenu-item")
+      subMenuItem4.innerHTML=arrOderBook[i][3][3];
+      subMenuContainer.appendChild(subMenuItem4);
+    }
+    
+
+    menuItemContainer.appendChild(subMenuContainer);
+  };
+ 
 };
+//click icon mũi tên turnoff sidebar
+const turnOffSidebarAsset = document.querySelector(".menu-item-container:first-child img");
+turnOffSidebarAsset.onclick = function(){
+  sidebarAssetContainer.classList.remove("active");
+}
+const turnOffSidebarOrderBook= document.querySelector(".orderBook__container:first-child img");
+turnOffSidebarOrderBook.onclick = function(){
+  sidebarOrderBook.classList.remove("active");
+}

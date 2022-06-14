@@ -115,7 +115,8 @@ body {
   margin-bottom: 25px;
   img {
     height: 16px;
-    color: white;
+    filter: invert(79%) sepia(34%) saturate(1486%) hue-rotate(344deg)
+      brightness(95%) contrast(89%);
     padding-right: 10px;
   }
   .item-name {
@@ -186,11 +187,13 @@ body {
   display: flex;
   flex-direction: column;
   .orderBook__container {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 0px 30px;
   }
   .orderBook__container:first-child {
+    padding-bottom: 34px;
     img {
       padding-right: 12px;
       height: 16px;
@@ -205,19 +208,22 @@ body {
     }
   }
   .orderBook__container:not(:nth-child(1)) {
-    padding-top: 34px;
+    padding-bottom: 150px;
     img:last-child {
       height: 6px;
     }
     .orderBook-name {
-      color: #6f767e;
+      color: #a0a3af;
       padding-left: 15px;
+      font-weight: 700;
+      font-size: 14px;
     }
     .orderBook-name:hover {
       color: $col-orange;
     }
     .dropdown-orderBook-logo {
       margin-left: auto;
+      margin-right: 5px;
     }
   }
 }
@@ -225,6 +231,26 @@ body {
   padding-top: 30px;
 }
 
+.submenu__container {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 50px;
+  top: 30px;
+}
+
+.submenu__container {
+  width: 70%;
+  .submenu-item {
+    color: #6f767e;
+    padding: 8px 0px 8px 10px;
+  }
+  .submenu-item:hover {
+    background-color: #292d38;
+    border-radius: 10px;
+    color: $col-white;
+  }
+}
 // end-click sổ lệnh
 // header__right
 .header__right {
