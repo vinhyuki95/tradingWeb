@@ -136,19 +136,52 @@ const arrOderBook = [
      "../../img/common-header/base-command.png",
      "Lệnh CK cơ sở",
      "../../img/common-header/drop-up.png"
+      // [
+      //   "Lệnh Chờ ",
+      //   "Lịch sử đặt lệnh",
+      //   "Lịch sử giao dịch",
+      //   "Lệnh điều kiện"
+      // ]
     ],
     ["../../img/common-header/derivative-order.png",
      "Lệnh phái sinh",
      "../../img/common-header/drop-up.png"
+      // [
+      //   "Vị thế mở",
+      //   "Vị thế đóng",
+      //   "Lịch sử đặt lệnh"
+      // ]
     ],
     ["../../img/common-header/loan-history.png",
     "Lịch sử vay",
     "../../img/common-header/drop-up.png"
+      // [
+      //   "Hợp đồng vay đang mở",
+      //   "Lịch sử trả nợ",
+      //   "Lịch sử vay"]
     ]
     ];
  
 for(let i = 0; i<arrOderBook.length; i=i+1){
   const menuItemContainer = document.createElement("div");
-  menuItemContainer.classList.add("orderBook-container");
+  menuItemContainer.classList.add("orderBook__container");
+  sidebarOrderBook.appendChild(menuItemContainer);
 
-}
+  const itemLogo = document.createElement("img");
+  itemLogo.classList.add("orderBook-logo");
+  itemLogo.src= arrOderBook[i][0];
+  menuItemContainer.appendChild(itemLogo);
+
+  const itemName = document.createElement("div");
+  itemName.classList.add("orderBook-name");
+  itemName.innerHTML=arrOderBook[i][1];
+  menuItemContainer.appendChild(itemName);
+
+  if(arrOderBook[i][2] !== undefined){
+   const dropdownLogo=document.createElement("img");
+   dropdownLogo.classList.add("dropdown-orderBook-logo");
+   dropdownLogo.src=arrOderBook[i][2];
+   menuItemContainer.appendChild(dropdownLogo);
+  };
+
+};

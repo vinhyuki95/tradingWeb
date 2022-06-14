@@ -50,6 +50,7 @@ body {
   margin: 0px;
   align-items: center;
   list-style: none;
+  cursor: pointer;
 }
 
 .navbar__item .navbar__item-link {
@@ -146,7 +147,6 @@ body {
 }
 .header__wrap .sidebar-orderbook {
   position: absolute;
-  padding-top: 25px;
   left: -300px;
   top: 60px;
   width: 280px;
@@ -157,6 +157,47 @@ body {
 }
 .header__wrap .sidebar-orderbook.active {
   left: 0;
+}
+
+.sidebar-orderbook {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-orderbook .orderBook__container {
+  display: flex;
+  align-items: center;
+  padding: 0px 30px;
+}
+.sidebar-orderbook .orderBook__container:first-child img {
+  padding-right: 12px;
+  height: 16px;
+  filter: invert(79%) sepia(34%) saturate(1486%) hue-rotate(344deg) brightness(95%) contrast(89%);
+}
+.sidebar-orderbook .orderBook__container:first-child .orderBook-name {
+  color: #a0a3af;
+}
+.sidebar-orderbook .orderBook__container:first-child .orderBook-name:hover {
+  color: #e7ab21;
+}
+.sidebar-orderbook .orderBook__container:not(:nth-child(1)) {
+  padding-top: 34px;
+}
+.sidebar-orderbook .orderBook__container:not(:nth-child(1)) img:last-child {
+  height: 6px;
+}
+.sidebar-orderbook .orderBook__container:not(:nth-child(1)) .orderBook-name {
+  color: #6f767e;
+  padding-left: 15px;
+}
+.sidebar-orderbook .orderBook__container:not(:nth-child(1)) .orderBook-name:hover {
+  color: #e7ab21;
+}
+.sidebar-orderbook .orderBook__container:not(:nth-child(1)) .dropdown-orderBook-logo {
+  margin-left: auto;
+}
+
+.orderBook__container:first-child {
+  padding-top: 30px;
 }
 
 .header__right {
@@ -185,6 +226,7 @@ body {
   color: #ffffff;
 }
 .header__flex .star {
+  cursor: pointer;
   height: 18px;
   width: 28px;
   background-color: #cf422f;
@@ -217,6 +259,7 @@ body {
 .header__account .account__box {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .header__account .account__box span {
   color: #ffffff;
@@ -241,6 +284,7 @@ body {
 }
 
 .menuHide {
+  filter: invert(100%) sepia(0%) saturate(7459%) hue-rotate(85deg) brightness(101%) contrast(104%);
   height: 25px;
   width: 25px;
   padding: 0px 10px;
@@ -361,6 +405,9 @@ body {
     display: none;
   }
 
+  .header__content .header__logo {
+    cursor: pointer;
+  }
   .header__content .header__logo a .lg-name {
     margin-left: 15px;
     height: 18px;
