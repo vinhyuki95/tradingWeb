@@ -99,6 +99,9 @@ body {
   color: #a0a3af;
   font-size: 14px;
 }
+.menu-item-container:first-child .item-name:hover {
+  color: #c5bdbd;
+}
 
 .menu-item-container:last-child {
   width: 220px;
@@ -115,11 +118,15 @@ body {
 .menu-item-container:last-child .item-name {
   color: #e7ab21;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .dropdown-logo {
   margin-left: auto;
+}
+
+.menu-item-container:last-child:hover {
+  background-color: #313541;
 }
 
 .menu-item-container {
@@ -127,19 +134,19 @@ body {
 }
 .menu-item-container .sub-container {
   position: absolute;
-  top: 85px;
+  top: 70px;
   left: 0px;
   height: 200px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: #6f767e;
 }
 .menu-item-container .sub-container .sub-menu-item {
-  padding: 20px 10px;
+  padding: 15px 35px;
 }
 .menu-item-container .sub-container .sub-menu-item:hover {
-  color: #e7ab21;
+  color: #c5bdbd;
 }
 
 .header__wrap {

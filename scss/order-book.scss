@@ -123,6 +123,9 @@ body {
     color: #a0a3af;
     font-size: $font-14px;
   }
+  .item-name:hover {
+    color: #c5bdbd;
+  }
 }
 .menu-item-container:last-child {
   width: 220px;
@@ -138,29 +141,32 @@ body {
   .item-name {
     color: $col-orange;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 600;
   }
 }
 .dropdown-logo {
   margin-left: auto;
+}
+.menu-item-container:last-child:hover {
+  background-color: #313541;
 }
 
 .menu-item-container {
   position: relative;
   .sub-container {
     position: absolute;
-    top: 85px;
+    top: 70px;
     left: 0px;
     height: 200px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    color: white;
+    color: #6f767e;
     .sub-menu-item {
-      padding: 20px 10px;
+      padding: 15px 35px;
     }
     .sub-menu-item:hover {
-      color: $col-orange;
+      color: #c5bdbd;
     }
   }
 }
