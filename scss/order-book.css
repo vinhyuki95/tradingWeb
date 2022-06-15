@@ -71,15 +71,12 @@ body {
 .header__wrap .sidebar-asset-container {
   padding-top: 25px;
   position: fixed;
-  left: -300px;
+  left: 0px;
   top: 60px;
   width: 280px;
   height: calc(100vh - 60px);
   background-color: #1d2029;
   transition: left 500ms;
-}
-.header__wrap .sidebar-asset-container.active {
-  left: 0px;
 }
 
 .menu-item-container {
@@ -133,6 +130,7 @@ body {
   position: relative;
 }
 .menu-item-container .sub-container {
+  border-left: 2px solid #6f767e;
   position: absolute;
   top: 70px;
   left: 0px;
@@ -142,6 +140,7 @@ body {
   flex-direction: column;
   color: #6f767e;
   visibility: hidden;
+  transition: top 5s;
 }
 .menu-item-container .sub-container .sub-menu-item {
   padding: 15px 35px;
@@ -153,21 +152,23 @@ body {
   visibility: visible;
 }
 
+.dropdown-orderBook-logo.click {
+  /* Safari */
+  transform: rotate(180deg);
+}
+
 .header__wrap {
   position: relative;
 }
 .header__wrap .sidebar-orderbook {
   position: absolute;
-  left: -300px;
+  left: 0px;
   top: 60px;
   width: 280px;
   height: calc(100vh - 60px);
   background-color: #1d2029;
   transition: left 500ms;
   z-index: 2;
-}
-.header__wrap .sidebar-orderbook.active {
-  left: 0;
 }
 
 .sidebar-orderbook {

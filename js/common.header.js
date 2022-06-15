@@ -61,9 +61,9 @@ const arrSidebarAsset=[
     "Tổng tài sản",
     "../../img/common-header/drop-up.png",
     [
-      "Tài khoản thông thường",
-      "Tài khoản ký quỹ",
-      "Tài khoản phát sinh",
+    "Tài khoản thông thường",
+    "Tài khoản ký quỹ",
+    "Tài khoản phát sinh",
     ]
   ]
 ];
@@ -83,23 +83,31 @@ for(let i=0; i<arrSidebarAsset.length; i=i+1){
   itemNameAsset.innerHTML= arrSidebarAsset[i][1];
   menuItemContainer.appendChild(itemNameAsset);
 
-  if(arrSidebarAsset[i][2]!== undefined){
+  // if(arrSidebarAsset[i][2]!== undefined){
+  //   const dropdownLogo = document.createElement("img");
+  //   dropdownLogo.classList.add("dropdown-logo");
+  //   dropdownLogo.src = arrSidebarAsset[i][2];
+  //   menuItemContainer.appendChild(dropdownLogo);
+  // };
+  
+  if(arrSidebarAsset[i][3]!== undefined && arrSidebarAsset[i][2]!== undefined){
     const dropdownLogo = document.createElement("img");
     dropdownLogo.classList.add("dropdown-logo");
     dropdownLogo.src = arrSidebarAsset[i][2];
     menuItemContainer.appendChild(dropdownLogo);
-    dropdownLogo.onclick = function(){
-      
-    }
-  };
-  
-  if(arrSidebarAsset[i][3]!== undefined){
+
     const subContainer= document.createElement("div");
     subContainer.classList.add("sub-container");
+    menuItemContainer.onclick = function(){ 
+      subContainer.classList.toggle("active");
+      dropdownLogo.classList.toggle("onclick");
+    }
 
     const subMenuItem1 =document.createElement("div");
     subMenuItem1.classList.add("sub-menu-item");
     subMenuItem1.innerHTML= arrSidebarAsset[i][3][0];
+    console.log(subMenuItem1);
+
     subContainer.appendChild(subMenuItem1);
 
     const submenuItem2 =document.createElement("div");
@@ -120,7 +128,6 @@ for(let i=0; i<arrSidebarAsset.length; i=i+1){
   };
  }
 
-
 // click sổ lệnh
 // selector element được click và tạo element để sidebar
 const headerWrap = document.querySelector(".header__wrap");
@@ -130,9 +137,9 @@ const sidebarOrderBook = document.createElement("div");
  headerWrap.appendChild(sidebarOrderBook);
 
 // khi click vào sổ lệnh sidebarOrderBook sẽ đc avtive;
- orderBookElement.onclick = function(){
-  sidebarOrderBook.classList.toggle("active");
- }
+//  orderBookElement.onclick = function(){
+//   sidebarOrderBook.classList.toggle("active");
+//  }
 
 const arrOderBook = [
     ["../../img/common-header/left-long.svg","Ẩn Menu"],
@@ -182,14 +189,7 @@ for(let i = 0; i<arrOderBook.length; i=i+1){
   itemName.innerHTML=arrOderBook[i][1];
   menuItemContainer.appendChild(itemName);
 
-  // if(arrOderBook[i][2] !== undefined){
-  //  const dropdownLogo=document.createElement("img");
-  //  dropdownLogo.classList.add("dropdown-orderBook-logo");
-  //  dropdownLogo.src=arrOderBook[i][2];
-  //  menuItemContainer.appendChild(dropdownLogo);
-  // };
-
-  // 2 đk này xảy ra cùng 1 lúc nên phải xảy ra cùng nhau 
+  // 2 hành động này liên quan tới nhau nên phải xảy ra cùng nhau
   if(arrOderBook[i][3] !== undefined && arrOderBook[i][2] !== undefined){
     const dropdownLogo=document.createElement("img");
     dropdownLogo.classList.add("dropdown-orderBook-logo");
@@ -201,8 +201,9 @@ for(let i = 0; i<arrOderBook.length; i=i+1){
     menuItemContainer.appendChild(subMenuContainer);
 
     //onclick dropdownLogo
-    dropdownLogo.onclick = function(){
+    menuItemContainer.onclick = function(){
       subMenuContainer.classList.toggle("active");
+      dropdownLogo.classList.toggle("click");
     }
 
     const subMenuItem1 = document.createElement("div");
@@ -230,15 +231,15 @@ for(let i = 0; i<arrOderBook.length; i=i+1){
 };
 
 
-
 //click icon mũi tên turnoff sidebar
 const turnOffSidebarAsset = document.querySelector(".menu-item-container:first-child img");
 turnOffSidebarAsset.onclick = function(){
   sidebarAssetContainer.classList.remove("active");
+  console.log(sidebarAssetContainer);
 }
 const turnOffSidebarOrderBook= document.querySelector(".orderBook__container:first-child img");
 turnOffSidebarOrderBook.onclick = function(){
-  sidebarOrderBook.classList.remove("active");
+  sidebarOrderBook.classList.add("active");
 }
 
 

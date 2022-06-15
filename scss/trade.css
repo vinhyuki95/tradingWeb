@@ -68,8 +68,7 @@ body {
 }
 
 .header__wrap .sidebar-asset-container {
-  padding-top: 25px;
-  position: fixed;
+  position: absolute;
   left: -300px;
   top: 60px;
   width: 280px;
@@ -124,6 +123,12 @@ body {
   margin-left: auto;
 }
 
+.dropdown-logo.onclick {
+  /* Safari */
+  transform: rotate(180deg);
+  margin-right: 0px;
+}
+
 .menu-item-container {
   position: relative;
 }
@@ -142,6 +147,12 @@ body {
 }
 .menu-item-container .sub-container .sub-menu-item:hover {
   color: #e7ab21;
+}
+.menu-item-container .sub-container {
+  visibility: hidden;
+}
+.menu-item-container .sub-container.active {
+  visibility: visible;
 }
 
 .header__wrap {
