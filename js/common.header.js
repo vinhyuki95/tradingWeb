@@ -82,13 +82,6 @@ for(let i=0; i<arrSidebarAsset.length; i=i+1){
   itemNameAsset.classList.add("item-name");
   itemNameAsset.innerHTML= arrSidebarAsset[i][1];
   menuItemContainer.appendChild(itemNameAsset);
-
-  // if(arrSidebarAsset[i][2]!== undefined){
-  //   const dropdownLogo = document.createElement("img");
-  //   dropdownLogo.classList.add("dropdown-logo");
-  //   dropdownLogo.src = arrSidebarAsset[i][2];
-  //   menuItemContainer.appendChild(dropdownLogo);
-  // };
   
   if(arrSidebarAsset[i][3]!== undefined && arrSidebarAsset[i][2]!== undefined){
     const dropdownLogo = document.createElement("img");
@@ -136,8 +129,8 @@ const sidebarOrderBook = document.createElement("div");
  sidebarOrderBook.classList.add("sidebar-orderbook");
  headerWrap.appendChild(sidebarOrderBook);
 
-// khi click vào sổ lệnh sidebarOrderBook sẽ đc avtive;
-//  orderBookElement.onclick = function(){
+//khi click vào sổ lệnh sidebarOrderBook sẽ đc avtive;
+//   orderBookElement.onclick = function(){
 //   sidebarOrderBook.classList.toggle("active");
 //  }
 
@@ -200,10 +193,11 @@ for(let i = 0; i<arrOderBook.length; i=i+1){
     subMenuContainer.classList.add("submenu__container");
     menuItemContainer.appendChild(subMenuContainer);
 
-    //onclick dropdownLogo
+    //onclick menuItemContainer
     menuItemContainer.onclick = function(){
       subMenuContainer.classList.toggle("active");
       dropdownLogo.classList.toggle("click");
+      menuItemContainer.classList.toggle("change");
     }
 
     const subMenuItem1 = document.createElement("div");
@@ -239,18 +233,7 @@ turnOffSidebarAsset.onclick = function(){
 }
 const turnOffSidebarOrderBook= document.querySelector(".orderBook__container:first-child img");
 turnOffSidebarOrderBook.onclick = function(){
-  sidebarOrderBook.classList.add("active");
+  sidebarOrderBook.classList.remove("active");
 }
 
 
-
-// //onclick dropdowm-toggle submenu-container
-// const itemLogoClick = document.querySelectorAll(".dropdown-orderBook-logo");
-// const subMenuContainer = document.querySelector(".submenu__container");
-// for(let i=0; i<itemLogoClick.length; i=i+1){
-//   const dropdownLogo = itemLogoClick[i];
-//   dropdownLogo.onclick = function(){
-//   subMenuContainer.classList.toggle("active");   
-//   console.log(dropdownLogo);
-//   };
-// }

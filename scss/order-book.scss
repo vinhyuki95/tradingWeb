@@ -190,7 +190,7 @@ body {
   .sidebar-orderbook {
     position: absolute;
     // left: -300px;
-    left: 0px;
+    left: 0;
     top: 60px;
     width: 280px;
     height: calc(100vh - 60px);
@@ -198,8 +198,8 @@ body {
     transition: left 500ms;
     z-index: 2;
   }
-  // .sidebar-orderbook.active {
-  //   left: 0;
+  // .sidebar-orderbook:active {
+  //   left: 0px;
   // }
 }
 .sidebar-orderbook {
@@ -253,14 +253,12 @@ body {
 .submenu__container {
   position: absolute;
   width: 100px;
-  height: 100px;
+  height: 0px;
   left: 50px;
-  top: 30px;
+  top: -600px;
   width: 70%;
-  visibility: hidden;
-}
-
-.submenu__container {
+  transition: height 300ms;
+  // visibility: hidden;
   .submenu-item {
     color: #6f767e;
     padding: 8px 0px 8px 10px;
@@ -271,9 +269,12 @@ body {
     color: $col-white;
   }
 }
+
 .orderBook__container {
   .submenu__container.active {
-    visibility: visible;
+    // visibility: visible;
+    height: 100px;
+    top: 30px;
   }
 }
 
@@ -448,9 +449,6 @@ body {
 }
 
 @media only screen and(max-width:1205px) {
-  // .header__nav {
-  //   padding-left: 10px;
-  // }
   .navbar__item {
     .navbar__item-link {
       padding: 0px 10px;

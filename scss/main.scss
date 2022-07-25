@@ -973,7 +973,7 @@ img.deepzoom {
   border-radius: 5px;
   background-color: #292d38;
   padding-top: 5px;
-  color: #e2e2e2;
+  color: #a0a3af;
   div {
     padding: 8px 20px;
   }
@@ -1014,6 +1014,7 @@ img.deepzoom {
 .industry-hover {
   position: relative;
   .menu-industry {
+    border-radius: 5px;
     left: 0;
     top: 38px;
     position: absolute;
@@ -1028,6 +1029,7 @@ img.deepzoom {
         tr {
           th {
             padding: 4px 10px;
+            color: #a0a3af;
           }
         }
       }
@@ -1035,6 +1037,7 @@ img.deepzoom {
         tr {
           td {
             padding: 4px 10px;
+            color: #a0a3af;
           }
         }
       }

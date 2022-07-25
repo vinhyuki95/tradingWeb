@@ -162,7 +162,7 @@ body {
 }
 .header__wrap .sidebar-orderbook {
   position: absolute;
-  left: 0px;
+  left: 0;
   top: 60px;
   width: 280px;
   height: calc(100vh - 60px);
@@ -222,13 +222,12 @@ body {
 .submenu__container {
   position: absolute;
   width: 100px;
-  height: 100px;
+  height: 0px;
   left: 50px;
-  top: 30px;
+  top: -600px;
   width: 70%;
-  visibility: hidden;
+  transition: height 300ms;
 }
-
 .submenu__container .submenu-item {
   color: #6f767e;
   padding: 8px 0px 8px 10px;
@@ -240,7 +239,8 @@ body {
 }
 
 .orderBook__container .submenu__container.active {
-  visibility: visible;
+  height: 100px;
+  top: 30px;
 }
 
 .header__right {
