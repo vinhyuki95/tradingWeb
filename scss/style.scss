@@ -1,0 +1,33 @@
+html {
+  background-color: #252424;
+}
+.container {
+  padding: 100px 0px;
+  h2 {
+    color: white;
+    text-align: center;
+  }
+  .menu-item-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    li {
+      list-style-type: none;
+      margin: 20px 0px;
+      border-radius: 50%;
+      background-color: chocolate;
+      height: 80px;
+      width: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+      }
+    }
+  }
+}
